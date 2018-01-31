@@ -11,9 +11,9 @@ const Main = () => {
   return (
     <div className="main">
       <Switch>
-        <Route exact path ="/people" component={ People }/>
-        <Route exact path ="/planets" component={ Planets }/>
-        <Route exact path ="/vehicles" component={ Vehicles }/>
+        <Route exact path ="/people" render={ () => (<People />) }/>
+        <Route exact path ="/planets" render={ () => (<Planets />)}/>
+        <Route exact path ="/vehicles" render={ () => (<Vehicles />)}/>
       </Switch>
       <Crawl />
     </div>
