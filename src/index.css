@@ -1,4 +1,12 @@
 body {
   background-color: grey;
-  height: 100vh;
+  box-sizing: border-box;
+  letter-spacing: .13em;
+  min-height: 100%;
   width: 100%; }
+
+h1 {
+  margin: 0; }
+
+h2 {
+  margin: 0; }
