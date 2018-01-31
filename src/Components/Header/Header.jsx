@@ -1,14 +1,18 @@
 import React from 'react';
 import './Header.css';
-import FavButton from '../FavButton/FavButton.jsx'
+import { Link } from 'react-router-dom';
 
-const Header = (props) => {
+let FavCount = 0;
+
+const Header = props => {
   return (
     <div className="header">
       <h1>Swapi-box</h1>
-      <FavButton />
+      <button>
+        <Link to="">View Favorites {FavCount}</Link>
+      </button>
     </div>
-  )
-}
+  );
+};
 
 export default Header;
