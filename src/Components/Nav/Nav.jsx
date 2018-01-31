@@ -1,18 +1,18 @@
 import React from 'react';
 import './Nav.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const Nav = props => {
   return (
     <div className="nav">
       <button>
-        <Link to="">People</Link>
+        <NavLink to="/people">People</NavLink>
       </button>
       <button>
-        <Link to="">Planets</Link>
+        <NavLink to="/planets">Planets</NavLink>
       </button>
       <button>
-        <Link to="">Vehicles</Link>
+        <NavLink to="/vehicles">Vehicles</NavLink>
       </button>
     </div>
   );
