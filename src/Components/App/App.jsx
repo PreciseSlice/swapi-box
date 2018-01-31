@@ -9,9 +9,42 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      scroll: []
+      films: [],
+      peopleData: []
     };
   }
+
+  componentDidMount() {
+    const peopleData = this.getPeople();
+    const films = this.getfilms();
+    this.setState({
+      peopleData
+    });
+  }
+
+  getFilms = async () => {
+    const fetchFilmData = await fetch('https://swapi.co/api/films/');
+  };
+
+  getPeople = async () => {
+    const fetchPeopleData = await fetch('https://swapi.co/api/people/');
+    const cleanPeople = await fetchPeopleData.json();
+    const peopleMap = cleanPeople.results.map(async person => {
+      const name = person.name;
+      const fetchHomeworld = await fetch(person.homeworld);
+      const cleanHomeworld = await fetchHomeworld.json();
+
+      const homeworld = cleanHomeworld.name;
+      const population = cleanHomeworld.population;
+
+      const fetchSpecies = await fetch(person.species);
+      const cleanSpecies = await fetchSpecies.json();
+      const speciesName = cleanSpecies.name;
+
+      return { name, homeworld, population, speciesName };
+    });
+    return Promise.all(peopleMap);
+  };
 
   render() {
     return (
