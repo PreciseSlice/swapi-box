@@ -16,21 +16,34 @@ class App extends Component {
 
   componentDidMount() {
     const peopleData = this.getPeople();
-    const films = this.getfilms();
+    const films = this.getFilms();
     this.setState({
-      peopleData
+      peopleData,
+      films
     });
   }
 
   getFilms = async () => {
     const fetchFilmData = await fetch('https://swapi.co/api/films/');
-  };
+    const cleanFilms = await fetchFilmData.json();
+    const filmMap = cleanFilms.results.map( async film => {
+      const title = film.title;
+      const episodeId = film.episode_id;
+      const openingCrawl = film.opening_crawl;
+      const releaseYear = film.release_date;
+
+      return { title, episodeId, openingCrawl, releaseYear }
+    });
+    return filmMap
+  }
 
   getPeople = async () => {
     const fetchPeopleData = await fetch('https://swapi.co/api/people/');
     const cleanPeople = await fetchPeopleData.json();
     const peopleMap = cleanPeople.results.map(async person => {
+      
       const name = person.name;
+      
       const fetchHomeworld = await fetch(person.homeworld);
       const cleanHomeworld = await fetchHomeworld.json();
 
@@ -42,6 +55,7 @@ class App extends Component {
       const speciesName = cleanSpecies.name;
 
       return { name, homeworld, population, speciesName };
+
     });
     return Promise.all(peopleMap);
   };
