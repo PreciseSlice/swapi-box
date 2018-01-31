@@ -1,5 +1,8 @@
 body {
   background-color: grey;
+  background-image: url("./space.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   box-sizing: border-box;
   letter-spacing: .13em;
   min-height: 100%;
