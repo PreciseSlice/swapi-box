@@ -1,9 +1,10 @@
 import React from 'react';
+import './Planets.css';
 
 const Planets = () => {
   return (
-    <div>
-      <h3>I AM A Planets!</h3>
+    <div className="planets">
+      <h3>I AM A Planet!</h3>
     </div>
   );
 };

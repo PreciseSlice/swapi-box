@@ -14,8 +14,8 @@ const Main = () => {
         <Route exact path ="/people" component={ People }/>
         <Route exact path ="/planets" component={ Planets }/>
         <Route exact path ="/vehicles" component={ Vehicles }/>
-        <Crawl />
       </Switch>
+      <Crawl />
     </div>
   );
 };
