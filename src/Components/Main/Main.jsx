@@ -6,13 +6,13 @@ import Planets from '../Planets/Planets.jsx';
 import Vehicles from '../Vehicles/Vehicles.jsx';
 //import { Link } from 'react-router-dom'
 
-const Main = (props) => {
+const Main = () => {
   return (
     <div className="main">
       <Switch>
-        <Route exact path ='/people' component={ People }/>
-        <Route exact path ='/planets' component={ Planets }/>
-        <Route exact path ='/vehicles' component={ Vehicles }/>
+        <Route exact path ="/people" component={ People }/>
+        <Route exact path ="/planets" component={ Planets }/>
+        <Route exact path ="/vehicles" component={ Vehicles }/>
       </Switch>
     </div>
   );

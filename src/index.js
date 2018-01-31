@@ -5,9 +5,12 @@ import './index.css';
 import App from './Components/App/App.jsx';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render((
+const router = (
   <BrowserRouter>
     <App />
   </BrowserRouter>
-), document.getElementById('root'));
+)
+
+ReactDOM.render(router, document.getElementById('root'));
+
 registerServiceWorker();

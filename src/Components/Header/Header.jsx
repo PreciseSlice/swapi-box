@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 let FavCount = 0;
 
-const Header = props => {
+const Header = () => {
   return (
     <div className="header">
       <h1>Swapi-box</h1>

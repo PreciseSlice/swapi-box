@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Planets = (props) => {
+const Planets = () => {
   return (
     <div>
       <h3>I AM A Planets!</h3>

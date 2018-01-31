@@ -3,6 +3,7 @@ import './App.css';
 import Header from '../Header/Header.jsx';
 import Nav from '../Nav/Nav.jsx';
 import Main from '../Main/Main';
+//import { Route, NavLink, Link } from 'react-router-dom';
 
 class App extends Component {
   constructor(props) {
