@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import './People.css';
 
 class People extends Component {
-  componentDidMount() {
+  async componentDidMount() {
     const { setPeople, peopleData } = this.props;
     // do i need an || data.length === 1 to let the user get 10 new cards?
     if (peopleData.length < 1) {
-      const peopleData = this.getPeople();
+      const peopleData = await this.getPeople();
       setPeople(peopleData);
     }
   }

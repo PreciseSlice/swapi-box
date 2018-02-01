@@ -12,46 +12,32 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      films: [],
+      filmData: [],
       peopleData: []
     };
   }
 
-  componentDidMount() {
-    const films = this.getFilms();
-    this.setState({
-      films
-    });
-  }
-
-  // crawl should make this call
-  // pick 0-7 at random, get text from ."opening_crawl"
-
-  getFilms = async () => {
-    const fetchFilmData = await fetch('https://swapi.co/api/films/');
-    const cleanFilms = await fetchFilmData.json();
-    const filmMap = cleanFilms.results.map(async film => {
-      const title = film.title;
-      const episodeId = film.episode_id;
-      const openingCrawl = film.opening_crawl;
-      const releaseYear = film.release_date;
-
-      return { title, episodeId, openingCrawl, releaseYear };
-    });
-    return filmMap;
-  };
+  setFilms = filmData => this.setState({ filmData });
 
   setPeople = peopleData => this.setState({ peopleData });
 
   render() {
-    console.log(this.state);
     return (
       <div className="app">
         <Header />
         <Nav />
         <div className="main">
           <Switch>
-            <Route exact path="/" render={() => <Crawl />} />
+            <Route
+              exact
+              path="/"
+              render={() => (
+                <Crawl
+                  setFilms={this.setFilms}
+                  filmData={this.state.filmData}
+                />
+              )}
+            />
             <Route
               path="/people"
               render={() => (
