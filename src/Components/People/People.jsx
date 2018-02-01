@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './People.css';
-import { getPeople } from '../apiCalls/apiCaller'
-//import PropTypes from 'prop-types';
+import { getPeople } from '../apiCalls/apiCaller';
+import Card from '../Card/Card';
+import PropTypes from 'prop-types';
 
 class People extends Component {
   async componentDidMount() {
@@ -12,34 +13,30 @@ class People extends Component {
     }
   }
 
-  // map and pass cards 
-
   render() {
     const { peopleData } = this.props;
+    
+    const renderCards = peopleData.map(person => (
+      <Card person={person} key={person.name} />
+    ));
+
     if (peopleData) {
-      return (
-        <div className="people">
-          {/* <h1>peopleData.name</h1>
-          <h3>peopleData.homeworld</h3>
-          <h3>peopleData.population</h3>
-          <h3>peopleData.speciesName</h3> */}
-          {/* favorite button */}
-        </div>
-      );
+      return <div className="peopleContainer">{renderCards}</div>;
     } else {
-      return null
+      return null;
     }
   }
 }
 
 export default People;
 
-// People.propTypes = {
-//   filmData: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       title: PropTypes.string.isRequired,
-//       episodeId: PropTypes.number.isRequired,
-//       openingCrawl: PropTypes.string.isRequired
-//     }).isRequired
-//   ).isRequired
-// };
+People.propTypes = {
+  peopleData: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      homeWolrd: PropTypes.string.isRequired,
+      population: PropTypes.number.isRequired,
+      speciesName: PropTypes.string.isRequired
+    }).isRequired
+  ).isRequired
+};

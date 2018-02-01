@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Crawl.css';
 import PropTypes from 'prop-types';
-import { getFilms } from '../apiCalls/apiCaller'
+import { getFilms } from '../apiCalls/apiCaller';
 
 class Crawl extends Component {
   async componentDidMount() {

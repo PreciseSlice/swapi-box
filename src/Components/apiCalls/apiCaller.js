@@ -1,3 +1,5 @@
+// cleaners need to be seperated from call
+
 export const getFilms = async () => {
   const fetchFilmData = await fetch('https://swapi.co/api/films/');
   const cleanFilms = await fetchFilmData.json();
