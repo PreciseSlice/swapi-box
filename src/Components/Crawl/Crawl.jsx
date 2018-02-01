@@ -1,29 +1,16 @@
 import React, { Component } from 'react';
 import './Crawl.css';
 import PropTypes from 'prop-types';
+import { getFilms } from '../apiCalls/apiCaller'
 
 class Crawl extends Component {
   async componentDidMount() {
     const { setFilms, filmData } = this.props;
     if (filmData.length < 1) {
-      const filmData = await this.getFilms();
+      const filmData = await getFilms();
       setFilms(filmData);
     }
   }
-
-  getFilms = async () => {
-    const fetchFilmData = await fetch('https://swapi.co/api/films/');
-    const cleanFilms = await fetchFilmData.json();
-    const filmMap = cleanFilms.results.map(async film => {
-      const title = film.title;
-      const episodeId = film.episode_id;
-      const openingCrawl = film.opening_crawl;
-      const releaseDate = film.release_date;
-
-      return { title, episodeId, openingCrawl, releaseDate };
-    });
-    return Promise.all(filmMap);
-  };
 
   romanize = num => {
     if (!+num) return NaN;

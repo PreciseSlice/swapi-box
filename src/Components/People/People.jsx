@@ -1,48 +1,45 @@
 import React, { Component } from 'react';
 import './People.css';
+import { getPeople } from '../apiCalls/apiCaller'
+//import PropTypes from 'prop-types';
 
 class People extends Component {
   async componentDidMount() {
     const { setPeople, peopleData } = this.props;
-    // do i need an || data.length === 1 to let the user get 10 new cards?
     if (peopleData.length < 1) {
-      const peopleData = await this.getPeople();
+      const peopleData = await getPeople();
       setPeople(peopleData);
     }
   }
 
-  // map over data
-  // all will have a boolean of isFavorite
-  // use names as key
-
-  getPeople = async () => {
-    const fetchPeopleData = await fetch('https://swapi.co/api/people/');
-    const cleanPeople = await fetchPeopleData.json();
-    const peopleMap = cleanPeople.results.map(async person => {
-      const name = person.name;
-
-      const fetchHomeworld = await fetch(person.homeworld);
-      const cleanHomeworld = await fetchHomeworld.json();
-
-      const homeworld = cleanHomeworld.name;
-      const population = cleanHomeworld.population;
-
-      const fetchSpecies = await fetch(person.species);
-      const cleanSpecies = await fetchSpecies.json();
-      const speciesName = cleanSpecies.name;
-
-      return { name, homeworld, population, speciesName };
-    });
-    return Promise.all(peopleMap);
-  };
+  // map and pass cards 
 
   render() {
-    return (
-      <div className="people">
-        <h3>I AM A PERSON</h3>
-      </div>
-    );
+    const { peopleData } = this.props;
+    if (peopleData) {
+      return (
+        <div className="people">
+          {/* <h1>peopleData.name</h1>
+          <h3>peopleData.homeworld</h3>
+          <h3>peopleData.population</h3>
+          <h3>peopleData.speciesName</h3> */}
+          {/* favorite button */}
+        </div>
+      );
+    } else {
+      return null
+    }
   }
 }
 
 export default People;
+
+// People.propTypes = {
+//   filmData: PropTypes.arrayOf(
+//     PropTypes.shape({
+//       title: PropTypes.string.isRequired,
+//       episodeId: PropTypes.number.isRequired,
+//       openingCrawl: PropTypes.string.isRequired
+//     }).isRequired
+//   ).isRequired
+// };
