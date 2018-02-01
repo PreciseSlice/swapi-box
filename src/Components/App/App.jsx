@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
 import './App.css';
 import Header from '../Header/Header.jsx';
 import Nav from '../Nav/Nav.jsx';
-import Main from '../Main/Main';
-//import { Route, NavLink, Link } from 'react-router-dom';
+import People from '../People/People.jsx';
+import Planets from '../Planets/Planets.jsx';
+import Vehicles from '../Vehicles/Vehicles.jsx';
+import Crawl from '../Crawl/Crawl';
 
 class App extends Component {
   constructor(props) {
@@ -13,7 +16,7 @@ class App extends Component {
       peopleData: []
     };
   }
-  
+
   componentDidMount() {
     const films = this.getFilms();
     this.setState({
@@ -21,30 +24,47 @@ class App extends Component {
     });
   }
 
-  // crawl should make this call 
+  // crawl should make this call
   // pick 0-7 at random, get text from ."opening_crawl"
 
   getFilms = async () => {
     const fetchFilmData = await fetch('https://swapi.co/api/films/');
     const cleanFilms = await fetchFilmData.json();
-    const filmMap = cleanFilms.results.map( async film => {
+    const filmMap = cleanFilms.results.map(async film => {
       const title = film.title;
       const episodeId = film.episode_id;
       const openingCrawl = film.opening_crawl;
       const releaseYear = film.release_date;
 
-      return { title, episodeId, openingCrawl, releaseYear }
+      return { title, episodeId, openingCrawl, releaseYear };
     });
-    return filmMap
-  }
+    return filmMap;
+  };
+
+  setPeople = peopleData => this.setState({ peopleData });
 
   render() {
+    console.log(this.state);
     return (
       <div className="app">
         <Header />
         <Nav />
-        <Main setPeople={(peopleData) => this.setState({ peopleData })} 
-          peopleData={this.state.peopleData} />
+        <div className="main">
+          <Switch>
+            <Route exact path="/" render={() => <Crawl />} />
+            <Route
+              path="/people"
+              render={() => (
+                <People
+                  setPeople={this.setPeople}
+                  peopleData={this.state.peopleData}
+                />
+              )}
+            />
+            <Route path="/planets" render={() => <Planets />} />
+            <Route path="/vehicles" render={() => <Vehicles />} />
+          </Switch>
+        </div>
       </div>
     );
   }
