@@ -2,12 +2,12 @@ import React from 'react';
 import './Card.css';
 // import PropTypes from 'prop-types';
 
-const Card = ({ person, planet }) => {
-  //console.log(planet)
+const Card = ({ person, planet, vehicle }) => {
   return (
     <div className="card">
+
       {person && (
-        <div className="personCard">
+        <div className="person-card">
           <h1>{person.name}</h1>
           <div>
             <h3>{`Homeworld: ${person.homeworld}`}</h3>
@@ -17,8 +17,9 @@ const Card = ({ person, planet }) => {
           </div>
         </div>
       )}
+
       {planet && (
-        <div className="planetCard">
+        <div className="planet-card">
           <h1>{planet.name}</h1>
           <div>
             <h3>{`Terrain: ${planet.terrain}`}</h3>
@@ -29,6 +30,13 @@ const Card = ({ person, planet }) => {
           </div>
         </div>
       )}
+
+      {vehicle && (
+        <div className="vehicle-card">
+
+        </div>
+      )}
+
     </div>
   );
 };
@@ -50,6 +58,19 @@ export default Card;
 //   ).isRequired,
 
 //   planet: PropTypes.objectOf(
+//     PropTypes.shape({
+//       name: PropTypes.string.isRequired,
+//       terrain: PropTypes.string.isRequired,
+//       population: PropTypes.number.isRequired,
+//       climate: PropTypes.string.isRequired,
+//       residents: PropTypes.objectOf(
+//         PropTypes.shape({})
+//       ).isRequired
+//     }).isRequired
+//   ).isRequired
+// };
+
+//   vehicle: PropTypes.objectOf(
 //     PropTypes.shape({
 //       name: PropTypes.string.isRequired,
 //       terrain: PropTypes.string.isRequired,

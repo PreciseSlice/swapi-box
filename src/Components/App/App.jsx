@@ -14,7 +14,8 @@ class App extends Component {
     this.state = {
       filmData: [],
       peopleData: [],
-      planetData: []
+      planetData: [],
+      vehicleData: []
     };
   }
 
@@ -23,6 +24,8 @@ class App extends Component {
   setPeople = peopleData => this.setState({ peopleData });
 
   setPlanets = planetData => this.setState({ planetData });
+
+  setVehicles = vehicleData => this.setState({ vehicleData });
 
   render() {
     return (
@@ -42,7 +45,7 @@ class App extends Component {
                 />
               )}
             />
-
+            {/* styling refactor with div around next three */}
             <Route
               path="/people"
               render={() => (
@@ -63,7 +66,17 @@ class App extends Component {
               )}
             />
 
-            <Route path="/vehicles" render={() => <Vehicles />} />
+            <Route 
+              path="/vehicles" 
+              render={() => ( 
+                <Vehicles 
+                  setVehicle={this.setVehicles}
+                  planetData={this.state.vehicleData}  
+                />
+              )}
+            />
+
+            {/* favorites component */}
           </Switch>
         </div>
       </div>
