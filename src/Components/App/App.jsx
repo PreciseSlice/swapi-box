@@ -29,19 +29,17 @@ class App extends Component {
   setVehicles = vehicleData => this.setState({ vehicleData });
 
   clickHandler = cardProps => {
-    const selected = [...this.state.selected, cardProps]
-    this.setState({ selected })
-  }
+    const selected = [...this.state.selected, cardProps];
+    this.setState({ selected });
+  };
 
   render() {
-    console.log(this.state.selected)
     return (
       <div className="app">
         <Header />
         <Nav />
         <div className="main">
           <Switch>
-
             <Route
               exact
               path="/"
@@ -64,10 +62,10 @@ class App extends Component {
               )}
             />
 
-            <Route 
-              path="/planets" 
+            <Route
+              path="/planets"
               render={() => (
-                <Planets 
+                <Planets
                   setPlanets={this.setPlanets}
                   planetData={this.state.planetData}
                   clickHandler={this.clickHandler}
@@ -75,10 +73,10 @@ class App extends Component {
               )}
             />
 
-            <Route 
-              path="/vehicles" 
-              render={() => ( 
-                <Vehicles 
+            <Route
+              path="/vehicles"
+              render={() => (
+                <Vehicles
                   setVehicles={this.setVehicles}
                   vehicleData={this.state.vehicleData}
                   clickHandler={this.clickHandler}
@@ -96,6 +94,4 @@ class App extends Component {
 
 export default App;
 
-// Footer with major styling and gif/image backgroud dark space fleet img might
-// work well for the background of the whole thing.
 // Second image with closer perspective on the footer

@@ -18,7 +18,7 @@ class Planets extends Component {
 
     const renderCards = planetData.map(planet => (
       <Card 
-        planet={planet} 
+        data={planet} 
         key={planet.name} 
         clickHandler={clickHandler}  
       />
@@ -33,6 +33,9 @@ class Planets extends Component {
 }
 
 Planets.propTypes = {
+  
+  clickHandler: PropTypes.func.isRequired,
+
   planetData: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
@@ -42,6 +45,7 @@ Planets.propTypes = {
       //residents: PropTypes.arrayOf().isRequired,
     }).isRequired
   ).isRequired
+
 };
 
 export default Planets;
