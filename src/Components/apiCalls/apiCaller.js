@@ -58,8 +58,8 @@ export const getPlanets = async () => {
       return cleanResident.name;
     });
 
-    let residents = await Promise.all(residentMap);
-    residents = residents.join(', ');
+    const mapReturn = await Promise.all(residentMap);
+    const residents = mapReturn.join(', ');
 
     return { name, terrain, population, climate, residents };
   });

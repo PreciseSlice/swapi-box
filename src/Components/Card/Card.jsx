@@ -12,7 +12,7 @@ const Card = ({ person, planet, vehicle, clickHandler }) => {
             <h3>{`Homeworld: ${person.homeworld}`}</h3>
             <h3>{`Population: ${person.population}`}</h3>
             <h3>{`Species: ${person.speciesName}`}</h3>
-            <button className="favorite-button" onClick={clickHandler}>
+            <button className="favorite-button" onClick={() => clickHandler(person)}>
               Favorite
             </button>
           </div>
@@ -27,9 +27,10 @@ const Card = ({ person, planet, vehicle, clickHandler }) => {
             <h3>{`Population: ${planet.population}`}</h3>
             <h3>{`Climate: ${planet.climate}`}</h3>
             <h3>{`Residents: ${planet.residents} `}</h3>
-            <button className="favorite-button" onClick={clickHandler}>
+            <button className="favorite-button" onClick={() => clickHandler(planet)}>
               Favorite
-            </button>          </div>
+            </button>          
+          </div>
         </div>
       )}
 
@@ -40,9 +41,10 @@ const Card = ({ person, planet, vehicle, clickHandler }) => {
             <h3>{`Model: ${vehicle.model}`}</h3>
             <h3>{`Class: ${vehicle.vehicleClass}`}</h3>
             <h3>{`Passangers: ${vehicle.passengers}`}</h3>
-            <button className="favorite-button" onClick={clickHandler}>
+            <button className="favorite-button" onClick={() => clickHandler(vehicle)}>
               Favorite
-            </button>          </div>
+            </button>          
+          </div>
         </div>
       )}
     </div>
