@@ -1,4 +1,9 @@
-// cleaners need to be seperated from call
+// const initialFetch = async (url) => {
+//   const getData = await fetch(url);
+//   const jsonData = await getData.json();
+
+//   return await jsonData;
+// }
 
 export const getFilms = async () => {
   const fetchFilmData = await fetch('https://swapi.co/api/films/');
@@ -33,4 +38,28 @@ export const getPeople = async () => {
     return { name, homeworld, population, speciesName };
   });
   return Promise.all(peopleMap);
+};
+
+export const getPlanets = async () => {
+  const fetchPlanetData = await fetch('https://swapi.co/api/planets/');
+  const cleanPlanetData = await fetchPlanetData.json();
+  const planetMap = cleanPlanetData.results.map(async planet => {
+    const name = planet.name;
+    const terrain = planet.terrain;
+    const population = planet.population;
+    const climate = planet.climate;
+
+    const residentMap = planet.residents.map(async resident => {
+      const fetchResident = await fetch(resident);
+      const cleanResident = await fetchResident.json();
+
+      return cleanResident.name;
+    });
+
+    let residents = await Promise.all(residentMap);
+    residents = residents.join(', ');
+
+    return { name, terrain, population, climate, residents };
+  });
+  return Promise.all(planetMap);
 };
