@@ -19,7 +19,7 @@ class People extends Component {
     const renderCards = peopleData.map(person => (
       <Card person={person} key={person.name} />
     ));
-
+    
     if (peopleData) {
       return <div className="peopleContainer">{renderCards}</div>;
     } else {
@@ -34,7 +34,7 @@ People.propTypes = {
   peopleData: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
-      homeWolrd: PropTypes.string.isRequired,
+      //homeWolrd: PropTypes.string.isRequired,
       population: PropTypes.number.isRequired,
       speciesName: PropTypes.string.isRequired
     }).isRequired
