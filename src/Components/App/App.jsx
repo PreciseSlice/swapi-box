@@ -28,17 +28,13 @@ class App extends Component {
 
   setVehicles = vehicleData => this.setState({ vehicleData });
 
-  clickHandler = event => {
-    event.preventDefault();
-    console.log(event.target);
-    
-    //const selected = [...this.state.selected, this.props]
-    //console.log(selected);
-    
-    //this.setState({ selected })
+  clickHandler = cardProps => {
+    const selected = [...this.state.selected, cardProps]
+    this.setState({ selected })
   }
 
   render() {
+    console.log(this.state.selected)
     return (
       <div className="app">
         <Header />
