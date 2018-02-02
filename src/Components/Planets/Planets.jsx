@@ -14,10 +14,14 @@ class Planets extends Component {
   }
 
   render() {
-    const { planetData } = this.props;
+    const { planetData, clickHandler } = this.props;
 
     const renderCards = planetData.map(planet => (
-      <Card planet={planet} key={planet.name} />
+      <Card 
+        planet={planet} 
+        key={planet.name} 
+        clickHandler={clickHandler}  
+      />
     ));
 
     if (planetData) {

@@ -14,10 +14,14 @@ class Vehicles extends Component {
   }
 
   render() {
-    const { vehicleData } = this.props;
+    const { vehicleData, clickHandler } = this.props;
 
     const renderCards = vehicleData.map(vehicle => (
-      <Card vehicle={vehicle} key={vehicle.name} />
+      <Card 
+        vehicle={vehicle} 
+        key={vehicle.name} 
+        clickHandler={clickHandler}  
+      />
     ));
 
     if (vehicleData) {
@@ -34,7 +38,7 @@ Vehicles.propTypes = {
       name: PropTypes.string.isRequired,
       model: PropTypes.string.isRequired,
       vehicleClass: PropTypes.string.isRequired,
-      passengers: PropTypes.number.isRequired
+      //passengers: PropTypes.number.isRequired
     }).isRequired
   ).isRequired
 };

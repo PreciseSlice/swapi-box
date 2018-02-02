@@ -14,10 +14,14 @@ class People extends Component {
   }
 
   render() {
-    const { peopleData } = this.props;
+    const { peopleData, clickHandler } = this.props;
     
     const renderCards = peopleData.map(person => (
-      <Card person={person} key={person.name} />
+      <Card 
+        person={person} 
+        key={person.name} 
+        clickHandler={clickHandler}  
+      />
     ));
     
     if (peopleData) {
