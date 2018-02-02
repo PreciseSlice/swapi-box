@@ -15,7 +15,8 @@ class App extends Component {
       filmData: [],
       peopleData: [],
       planetData: [],
-      vehicleData: []
+      vehicleData: [],
+      selected: []
     };
   }
 
@@ -26,6 +27,16 @@ class App extends Component {
   setPlanets = planetData => this.setState({ planetData });
 
   setVehicles = vehicleData => this.setState({ vehicleData });
+
+  clickHandler = event => {
+    event.preventDefault();
+    console.log(event.target);
+    
+    //const selected = [...this.state.selected, this.props]
+    //console.log(selected);
+    
+    //this.setState({ selected })
+  }
 
   render() {
     return (
@@ -52,6 +63,7 @@ class App extends Component {
                 <People
                   setPeople={this.setPeople}
                   peopleData={this.state.peopleData}
+                  clickHandler={this.clickHandler}
                 />
               )}
             />
@@ -61,7 +73,8 @@ class App extends Component {
               render={() => (
                 <Planets 
                   setPlanets={this.setPlanets}
-                  planetData={this.state.planetData}  
+                  planetData={this.state.planetData}
+                  clickHandler={this.clickHandler}
                 />
               )}
             />
@@ -71,7 +84,8 @@ class App extends Component {
               render={() => ( 
                 <Vehicles 
                   setVehicles={this.setVehicles}
-                  vehicleData={this.state.vehicleData}  
+                  vehicleData={this.state.vehicleData}
+                  clickHandler={this.clickHandler}
                 />
               )}
             />
