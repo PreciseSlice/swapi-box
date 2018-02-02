@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Planets.css';
 import { getPlanets } from '../apiCalls/apiCaller';
-import Card from '../Card/Card';
+import Card from '../Card/Card.jsx';
 import PropTypes from 'prop-types';
 
 class Planets extends Component {
@@ -21,14 +21,12 @@ class Planets extends Component {
     ));
 
     if (planetData) {
-      return <div className="planetContainer">{renderCards}</div>;
+      return <div className="planet-container">{renderCards}</div>;
     } else {
       return null;
     }
   }
 }
-
-export default Planets;
 
 Planets.propTypes = {
   planetData: PropTypes.arrayOf(
@@ -41,3 +39,5 @@ Planets.propTypes = {
     }).isRequired
   ).isRequired
 };
+
+export default Planets;
