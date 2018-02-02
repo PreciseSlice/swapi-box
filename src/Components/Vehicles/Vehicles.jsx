@@ -18,7 +18,7 @@ class Vehicles extends Component {
 
     const renderCards = vehicleData.map(vehicle => (
       <Card 
-        vehicle={vehicle} 
+        data={vehicle} 
         key={vehicle.name} 
         clickHandler={clickHandler}  
       />
@@ -33,14 +33,18 @@ class Vehicles extends Component {
 }
 
 Vehicles.propTypes = {
+
+  clickHandler: PropTypes.func.isRequired,
+
   vehicleData: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       model: PropTypes.string.isRequired,
-      vehicleClass: PropTypes.string.isRequired,
+      vehicleClass: PropTypes.string.isRequired
       //passengers: PropTypes.number.isRequired
     }).isRequired
   ).isRequired
+  
 };
 
 export default Vehicles;

@@ -18,7 +18,7 @@ class People extends Component {
     
     const renderCards = peopleData.map(person => (
       <Card 
-        person={person} 
+        data={person} 
         key={person.name} 
         clickHandler={clickHandler}  
       />
@@ -35,6 +35,8 @@ class People extends Component {
 export default People;
 
 People.propTypes = {
+  clickHandler: PropTypes.func.isRequired,
+
   peopleData: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
@@ -43,4 +45,5 @@ People.propTypes = {
       speciesName: PropTypes.string.isRequired
     }).isRequired
   ).isRequired
+  
 };
