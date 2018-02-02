@@ -5,7 +5,6 @@ import './Card.css';
 const Card = ({ person, planet, vehicle }) => {
   return (
     <div className="card">
-
       {person && (
         <div className="person-card">
           <h1>{person.name}</h1>
@@ -33,17 +32,21 @@ const Card = ({ person, planet, vehicle }) => {
 
       {vehicle && (
         <div className="vehicle-card">
-
+          <h1>{vehicle.name}</h1>
+          <div>
+            <h3>{`Model: ${vehicle.model}`}</h3>
+            <h3>{`Class: ${vehicle.vehicleClass}`}</h3>
+            <h3>{`Passangers: ${vehicle.passengers}`}</h3>
+          </div>
         </div>
       )}
-
     </div>
   );
 };
 
 export default Card;
 
-// how do I conditionally check only the prop passed? 
+// how do I conditionally check only the prop passed?
 // need to be able to validate a prop that is only somtimes passed
 
 // Card.propTypes = {

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.css';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 let FavCount = 0;
 
@@ -9,7 +9,7 @@ const Header = () => {
     <div className="header">
       <h1>SWapi-box</h1>
       <button>
-        <Link to="">View Favorites {FavCount}</Link>
+        <NavLink to="/favorites">View Favorites {FavCount}</NavLink>
       </button>
     </div>
   );

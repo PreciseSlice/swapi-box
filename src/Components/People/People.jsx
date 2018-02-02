@@ -35,7 +35,7 @@ People.propTypes = {
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       //homeWolrd: PropTypes.string.isRequired,
-      population: PropTypes.number.isRequired,
+      //population: PropTypes.number.isRequired,
       speciesName: PropTypes.string.isRequired
     }).isRequired
   ).isRequired

@@ -70,8 +70,8 @@ class App extends Component {
               path="/vehicles" 
               render={() => ( 
                 <Vehicles 
-                  setVehicle={this.setVehicles}
-                  planetData={this.state.vehicleData}  
+                  setVehicles={this.setVehicles}
+                  vehicleData={this.state.vehicleData}  
                 />
               )}
             />
