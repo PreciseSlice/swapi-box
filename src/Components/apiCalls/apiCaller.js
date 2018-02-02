@@ -5,6 +5,8 @@
 //   return await jsonData;
 // }
 
+// need catches, error thrown if 400
+
 export const getFilms = async () => {
   const fetchFilmData = await fetch('https://swapi.co/api/films/');
   const cleanFilms = await fetchFilmData.json();
@@ -62,4 +64,18 @@ export const getPlanets = async () => {
     return { name, terrain, population, climate, residents };
   });
   return Promise.all(planetMap);
+};
+
+export const getVehicles = async () => {
+  const fetchVehicleData = await fetch('https://swapi.co/api/vehicles/');
+  const cleanVehicles = await fetchVehicleData.json();
+  const vehicleMap = cleanVehicles.results.map(async vehicle => {
+    const name = vehicle.name;
+    const model = vehicle.model;
+    const vehicleClass = vehicle.vehicle_class;
+    const passengers = vehicle.passengers;
+
+    return { name, model, vehicleClass, passengers };
+  });
+  return Promise.all(vehicleMap);
 };
