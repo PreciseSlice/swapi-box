@@ -44,7 +44,7 @@ class App extends Component {
     return (
       <div className="app">
         <Header />
-        <Nav />
+        <Nav favCount={this.state.selected.length} />
         <div className="main">
           <Switch>
             <Route
@@ -57,7 +57,7 @@ class App extends Component {
                 />
               )}
             />
-            {/* styling refactor with div around next three */}
+
             <Route
               path="/people"
               render={() => (
@@ -94,7 +94,14 @@ class App extends Component {
               )}
             />
 
-            {/* favorites component */}
+            {/* <Route
+              path="/favorites"
+              render={() => (
+                <Favorites
+                  selected={this.state.selected}
+                />
+              )}
+            /> */}
           </Switch>
         </div>
       </div>
