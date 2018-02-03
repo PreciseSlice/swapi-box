@@ -1,8 +1,13 @@
-const callFetch = async url => {
-  const getData = await fetch(url);
-  const jsonData = await getData.json();
+export const callFetch = async url => {
+  try {
+    const getData = await fetch(url);
+    const jsonData = await getData.json();
 
-  return await jsonData;
+    return await jsonData;
+  } catch (er) {
+    const error = new Error('callFetch failed to fetch data');
+    return error;
+  }
 };
 
 export const getFilms = async url => {
