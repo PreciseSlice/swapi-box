@@ -19,7 +19,6 @@ class App extends Component {
       selected: []
     };
   }
-  
 
   setFilms = filmData => this.setState({ filmData });
 
@@ -30,12 +29,18 @@ class App extends Component {
   setVehicles = vehicleData => this.setState({ vehicleData });
 
   clickHandler = cardProps => {
-    const selected = [...this.state.selected, cardProps];
-    this.setState({ selected });
+    if (!this.state.selected.includes(cardProps)) {
+      const selected = [...this.state.selected, cardProps];
+      this.setState({ selected });
+    } else {
+      const selected = [
+        ...this.state.selected.filter(card => card !== cardProps)
+      ];
+      this.setState({ selected });
+    }
   };
 
   render() {
-    
     return (
       <div className="app">
         <Header />
