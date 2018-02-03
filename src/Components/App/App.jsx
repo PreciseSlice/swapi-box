@@ -7,6 +7,7 @@ import People from '../People/People.jsx';
 import Planets from '../Planets/Planets.jsx';
 import Vehicles from '../Vehicles/Vehicles.jsx';
 import Crawl from '../Crawl/Crawl';
+import Favorites from '../Favorites/Favorites.jsx';
 
 class App extends Component {
   constructor(props) {
@@ -16,7 +17,7 @@ class App extends Component {
       peopleData: [],
       planetData: [],
       vehicleData: [],
-      selected: []
+      favorites: []
     };
   }
 
@@ -29,14 +30,14 @@ class App extends Component {
   setVehicles = vehicleData => this.setState({ vehicleData });
 
   clickHandler = cardProps => {
-    if (!this.state.selected.includes(cardProps)) {
-      const selected = [...this.state.selected, cardProps];
-      this.setState({ selected });
+    if (!this.state.favorites.includes(cardProps)) {
+      const favorites = [...this.state.favorites, cardProps];
+      this.setState({ favorites });
     } else {
-      const selected = [
-        ...this.state.selected.filter(card => card !== cardProps)
+      const favorites = [
+        ...this.state.favorites.filter(card => card !== cardProps)
       ];
-      this.setState({ selected });
+      this.setState({ favorites });
     }
   };
 
@@ -44,7 +45,7 @@ class App extends Component {
     return (
       <div className="app">
         <Header />
-        <Nav favCount={this.state.selected.length} />
+        <Nav favCount={this.state.favorites.length} />
         <div className="main">
           <Switch>
             <Route
@@ -65,7 +66,7 @@ class App extends Component {
                   setPeople={this.setPeople}
                   peopleData={this.state.peopleData}
                   clickHandler={this.clickHandler}
-                  selected={this.state.selected}
+                  favorites={this.state.favorites}
                 />
               )}
             />
@@ -77,7 +78,7 @@ class App extends Component {
                   setPlanets={this.setPlanets}
                   planetData={this.state.planetData}
                   clickHandler={this.clickHandler}
-                  selected={this.state.selected}
+                  favorites={this.state.favorites}
                 />
               )}
             />
@@ -89,19 +90,19 @@ class App extends Component {
                   setVehicles={this.setVehicles}
                   vehicleData={this.state.vehicleData}
                   clickHandler={this.clickHandler}
-                  selected={this.state.selected}
+                  favorites={this.state.favorites}
                 />
               )}
             />
 
-            {/* <Route
+            <Route
               path="/favorites"
               render={() => (
                 <Favorites
-                  selected={this.state.selected}
+                  favorites={this.state.favorites}
                 />
               )}
-            /> */}
+            />
           </Switch>
         </div>
       </div>

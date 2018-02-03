@@ -14,10 +14,10 @@ class Vehicles extends Component {
   }
 
   render() {
-    const { vehicleData, clickHandler, selected } = this.props;
+    const { vehicleData, clickHandler, favorites } = this.props;
 
     const renderCards = vehicleData.map(vehicle => {
-      const highlighted = selected.includes(vehicle) ? 'highlighted' : '';
+      const highlighted = favorites.includes(vehicle) ? 'highlighted' : '';
       return (
         <Card
           data={vehicle}
@@ -39,7 +39,7 @@ class Vehicles extends Component {
 Vehicles.propTypes = {
   clickHandler: PropTypes.func.isRequired,
 
-  selected: PropTypes.array.isRequired,
+  favorites: PropTypes.array.isRequired,
 
   vehicleData: PropTypes.arrayOf(
     PropTypes.shape({
