@@ -1,10 +1,9 @@
 import React from 'react';
 import './Nav.css';
 import { NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-let FavCount = 0;
-
-const Nav = () => {
+const Nav = ({ favCount }) => {
   return (
     <div className="nav">
       <button>
@@ -20,10 +19,14 @@ const Nav = () => {
         <NavLink to="/vehicles">Vehicles</NavLink>
       </button>
       <button>
-        <NavLink to="/favorites">View Favorites {FavCount}</NavLink>
+        <NavLink to="/favorites">View Favorites {favCount}</NavLink>
       </button>
     </div>
   );
+};
+
+Nav.propTypes = {
+  favCount: PropTypes.number.isRequired
 };
 
 export default Nav;
