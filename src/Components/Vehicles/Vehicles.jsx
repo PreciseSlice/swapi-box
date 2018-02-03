@@ -8,7 +8,7 @@ class Vehicles extends Component {
   async componentDidMount() {
     const { setVehicles, vehicleData } = this.props;
     if (vehicleData.length < 1) {
-      const vehicleData = await getVehicles();
+      const vehicleData = await getVehicles('https://swapi.co/api/vehicles/');
       setVehicles(vehicleData);
     }
   }

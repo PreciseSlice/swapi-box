@@ -6,8 +6,12 @@ import { getFilms } from '../apiCalls/apiCaller';
 class Crawl extends Component {
   async componentDidMount() {
     const { setFilms, filmData } = this.props;
-    if (filmData.length < 1) {
-      const filmData = await getFilms();
+    const randomFilm = Math.floor(Math.random() * 7 + 1);
+
+    if (filmData) {
+      const filmData = await getFilms(
+        `https://swapi.co/api/films/${randomFilm}`
+      );
       setFilms(filmData);
     }
   }
@@ -55,19 +59,20 @@ class Crawl extends Component {
 
   render() {
     const { filmData } = this.props;
-    if (filmData.length) {
-      const randomFilm = filmData[Math.floor(Math.random() * filmData.length)];
+
+    // need condition for film data was checking if the array had length
+    if (filmData) {
       return (
         <div className="crawl-container">
           <div className="fade" />
           <section className="star-wars">
             <div className="crawl">
               <div className="title">
-                <p>{`Episode ${this.romanize(randomFilm.episodeId)}`}</p>
-                <h1>{randomFilm.title}</h1>
+                <p>{`Episode ${this.romanize(filmData.episodeId)}`}</p>
+                <h1>{filmData.title}</h1>
               </div>
-              <p>{randomFilm.openingCrawl}</p>
-              <h3>{`Release Date: ${randomFilm.releaseDate}`}</h3>
+              <p>{filmData.openingCrawl}</p>
+              <h3>{`Release Date: ${filmData.releaseDate}`}</h3>
             </div>
           </section>
         </div>
@@ -79,13 +84,7 @@ class Crawl extends Component {
 }
 
 Crawl.propTypes = {
-  filmData: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string.isRequired,
-      episodeId: PropTypes.number.isRequired,
-      openingCrawl: PropTypes.string.isRequired
-    }).isRequired
-  ).isRequired
+  filmData: PropTypes.object.isRequired
 };
 
 export default Crawl;

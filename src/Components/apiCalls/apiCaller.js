@@ -1,81 +1,92 @@
-// const initialFetch = async (url) => {
-//   const getData = await fetch(url);
-//   const jsonData = await getData.json();
+const callFetch = async url => {
+  const getData = await fetch(url);
+  const jsonData = await getData.json();
 
-//   return await jsonData;
-// }
-
-// need catches, error thrown if 400
-
-export const getFilms = async () => {
-  const fetchFilmData = await fetch('https://swapi.co/api/films/');
-  const cleanFilms = await fetchFilmData.json();
-  const filmMap = cleanFilms.results.map(async film => {
-    const title = film.title;
-    const episodeId = film.episode_id;
-    const openingCrawl = film.opening_crawl;
-    const releaseDate = film.release_date;
-
-    return { title, episodeId, openingCrawl, releaseDate };
-  });
-  return Promise.all(filmMap);
+  return await jsonData;
 };
 
-export const getPeople = async () => {
-  const fetchPeopleData = await fetch('https://swapi.co/api/people/');
-  const cleanPeople = await fetchPeopleData.json();
-  const peopleMap = cleanPeople.results.map(async person => {
-    const name = person.name;
+export const getFilms = async url => {
+  try {
+    const fetchFilmData = await callFetch(url);
 
-    const fetchHomeworld = await fetch(person.homeworld);
-    const cleanHomeworld = await fetchHomeworld.json();
+    const title = await fetchFilmData.title;
+    const episodeId = await fetchFilmData.episode_id;
+    const openingCrawl = await fetchFilmData.opening_crawl;
+    const releaseDate = await fetchFilmData.release_date;
 
-    const homeworld = cleanHomeworld.name;
-    const population = cleanHomeworld.population;
-
-    const fetchSpecies = await fetch(person.species);
-    const cleanSpecies = await fetchSpecies.json();
-    const speciesName = cleanSpecies.name;
-
-    return { name, homeworld, population, speciesName };
-  });
-  return Promise.all(peopleMap);
+    return await { title, episodeId, openingCrawl, releaseDate };
+  } catch (err) {
+    const error = new Error('getFilms failed to fetch filmData');
+    return error;
+  }
 };
 
-export const getPlanets = async () => {
-  const fetchPlanetData = await fetch('https://swapi.co/api/planets/');
-  const cleanPlanetData = await fetchPlanetData.json();
-  const planetMap = cleanPlanetData.results.map(async planet => {
-    const name = planet.name;
-    const terrain = planet.terrain;
-    const population = planet.population;
-    const climate = planet.climate;
+export const getPeople = async url => {
+  try {
+    const fetchPeopleData = await callFetch(url);
 
-    const residentMap = planet.residents.map(async resident => {
-      const fetchResident = await fetch(resident);
-      const cleanResident = await fetchResident.json();
+    const peopleMap = fetchPeopleData.results.map(async person => {
+      const name = person.name;
 
-      return cleanResident.name;
+      const fetchHomeworldData = await callFetch(person.homeworld);
+      const homeworld = fetchHomeworldData.name;
+      const population = fetchHomeworldData.population;
+
+      const fetchSpeciesData = await callFetch(person.species);
+      const speciesName = fetchSpeciesData.name;
+
+      return { name, homeworld, population, speciesName };
     });
-
-    const mapReturn = await Promise.all(residentMap);
-    const residents = mapReturn.join(', ');
-
-    return { name, terrain, population, climate, residents };
-  });
-  return Promise.all(planetMap);
+    return Promise.all(peopleMap);
+  } catch (err) {
+    const error = new Error('getPeople failed to fetch peopleData');
+    return error;
+  }
 };
 
-export const getVehicles = async () => {
-  const fetchVehicleData = await fetch('https://swapi.co/api/vehicles/');
-  const cleanVehicles = await fetchVehicleData.json();
-  const vehicleMap = cleanVehicles.results.map(async vehicle => {
-    const name = vehicle.name;
-    const model = vehicle.model;
-    const vehicleClass = vehicle.vehicle_class;
-    const passengers = vehicle.passengers;
+export const getPlanets = async url => {
+  try {
+    const fetchPlanetData = await callFetch(url);
 
-    return { name, model, vehicleClass, passengers };
-  });
-  return Promise.all(vehicleMap);
+    const planetMap = fetchPlanetData.results.map(async planet => {
+      const name = planet.name;
+      const terrain = planet.terrain;
+      const population = planet.population;
+      const climate = planet.climate;
+
+      const residentMap = planet.residents.map(async resident => {
+        const fetchResidentData = await callFetch(resident);
+
+        return fetchResidentData.name;
+      });
+
+      const mapReturn = await Promise.all(residentMap);
+      const residents = mapReturn.join(', ');
+
+      return { name, terrain, population, climate, residents };
+    });
+    return Promise.all(planetMap);
+  } catch (err) {
+    const error = new Error('getPlaenets failed to fetch plaenetData');
+    return error;
+  }
+};
+
+export const getVehicles = async url => {
+  try {
+    const fetchVehicleData = await callFetch(url);
+
+    const vehicleMap = fetchVehicleData.results.map(async vehicle => {
+      const name = vehicle.name;
+      const model = vehicle.model;
+      const vehicleClass = vehicle.vehicle_class;
+      const passengers = vehicle.passengers;
+
+      return { name, model, vehicleClass, passengers };
+    });
+    return Promise.all(vehicleMap);
+  } catch (err) {
+    const error = new Error('getVehicles failed to fetch vehicleData');
+    return error;
+  }
 };

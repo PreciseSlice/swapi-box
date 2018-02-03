@@ -13,7 +13,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      filmData: [],
+      filmData: {},
       peopleData: [],
       planetData: [],
       vehicleData: [],
@@ -97,11 +97,7 @@ class App extends Component {
 
             <Route
               path="/favorites"
-              render={() => (
-                <Favorites
-                  favorites={this.state.favorites}
-                />
-              )}
+              render={() => <Favorites favorites={this.state.favorites} />}
             />
           </Switch>
         </div>
