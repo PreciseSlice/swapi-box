@@ -6,7 +6,7 @@ import { getFilms } from '../apiCalls/apiCaller';
 class Crawl extends Component {
   async componentDidMount() {
     const { setFilms, filmData } = this.props;
-    const randomFilm = Math.floor(Math.random() * 7 + 1);
+    const randomFilm = Math.floor(Math.random() * 7);
   
     if (!filmData.title) {
       const filmData = await getFilms(
