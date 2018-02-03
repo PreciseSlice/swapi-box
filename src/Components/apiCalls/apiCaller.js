@@ -1,4 +1,4 @@
-const callFetch = async url => {
+export const callFetch = async url => {
   const getData = await fetch(url);
   const jsonData = await getData.json();
 
