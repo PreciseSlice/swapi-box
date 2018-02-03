@@ -15,7 +15,7 @@ export const getFilms = async url => {
     const releaseDate = await fetchFilmData.release_date;
 
     return await { title, episodeId, openingCrawl, releaseDate };
-  } catch (err) {
+  } catch (er) {
     const error = new Error('getFilms failed to fetch filmData');
     return error;
   }
@@ -38,7 +38,7 @@ export const getPeople = async url => {
       return { name, homeworld, population, speciesName };
     });
     return Promise.all(peopleMap);
-  } catch (err) {
+  } catch (er) {
     const error = new Error('getPeople failed to fetch peopleData');
     return error;
   }
@@ -66,7 +66,7 @@ export const getPlanets = async url => {
       return { name, terrain, population, climate, residents };
     });
     return Promise.all(planetMap);
-  } catch (err) {
+  } catch (er) {
     const error = new Error('getPlaenets failed to fetch plaenetData');
     return error;
   }
@@ -85,7 +85,7 @@ export const getVehicles = async url => {
       return { name, model, vehicleClass, passengers };
     });
     return Promise.all(vehicleMap);
-  } catch (err) {
+  } catch (er) {
     const error = new Error('getVehicles failed to fetch vehicleData');
     return error;
   }

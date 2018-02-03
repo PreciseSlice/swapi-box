@@ -7,8 +7,8 @@ class Crawl extends Component {
   async componentDidMount() {
     const { setFilms, filmData } = this.props;
     const randomFilm = Math.floor(Math.random() * 7 + 1);
-
-    if (filmData) {
+  
+    if (!filmData.title) {
       const filmData = await getFilms(
         `https://swapi.co/api/films/${randomFilm}`
       );
@@ -60,8 +60,7 @@ class Crawl extends Component {
   render() {
     const { filmData } = this.props;
 
-    // need condition for film data was checking if the array had length
-    if (filmData) {
+    if (filmData.title) {
       return (
         <div className="crawl-container">
           <div className="fade" />
