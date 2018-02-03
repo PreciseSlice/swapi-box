@@ -14,15 +14,19 @@ class Vehicles extends Component {
   }
 
   render() {
-    const { vehicleData, clickHandler } = this.props;
+    const { vehicleData, clickHandler, selected } = this.props;
 
-    const renderCards = vehicleData.map(vehicle => (
-      <Card 
-        data={vehicle} 
-        key={vehicle.name} 
-        clickHandler={clickHandler}  
-      />
-    ));
+    const renderCards = vehicleData.map(vehicle => {
+      const highlighted = selected.includes(vehicle) ? 'highlighted' : '';
+      return (
+        <Card
+          data={vehicle}
+          key={vehicle.name}
+          clickHandler={clickHandler}
+          highlighted={highlighted}
+        />
+      );
+    });
 
     if (vehicleData) {
       return <div className="vehicle-container">{renderCards}</div>;
@@ -33,8 +37,9 @@ class Vehicles extends Component {
 }
 
 Vehicles.propTypes = {
-
   clickHandler: PropTypes.func.isRequired,
+
+  selected: PropTypes.array.isRequired,
 
   vehicleData: PropTypes.arrayOf(
     PropTypes.shape({
@@ -44,7 +49,6 @@ Vehicles.propTypes = {
       //passengers: PropTypes.number.isRequired
     }).isRequired
   ).isRequired
-  
 };
 
 export default Vehicles;

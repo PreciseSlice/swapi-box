@@ -14,15 +14,19 @@ class Planets extends Component {
   }
 
   render() {
-    const { planetData, clickHandler } = this.props;
+    const { planetData, clickHandler, selected } = this.props;
 
-    const renderCards = planetData.map(planet => (
-      <Card 
-        data={planet} 
-        key={planet.name} 
-        clickHandler={clickHandler}  
-      />
-    ));
+    const renderCards = planetData.map(planet => {
+      const highlighted = selected.includes(planet) ? 'highlighted' : '';
+      return (
+        <Card
+          data={planet}
+          key={planet.name}
+          clickHandler={clickHandler}
+          highlighted={highlighted}
+        />
+      );
+    });
 
     if (planetData) {
       return <div className="planet-container">{renderCards}</div>;
@@ -33,8 +37,10 @@ class Planets extends Component {
 }
 
 Planets.propTypes = {
-  
+
   clickHandler: PropTypes.func.isRequired,
+
+  selected: PropTypes.array.isRequired,
 
   planetData: PropTypes.arrayOf(
     PropTypes.shape({
@@ -45,7 +51,6 @@ Planets.propTypes = {
       //residents: PropTypes.arrayOf().isRequired,
     }).isRequired
   ).isRequired
-
 };
 
 export default Planets;

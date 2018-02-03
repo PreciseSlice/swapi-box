@@ -19,6 +19,7 @@ class App extends Component {
       selected: []
     };
   }
+  
 
   setFilms = filmData => this.setState({ filmData });
 
@@ -34,6 +35,7 @@ class App extends Component {
   };
 
   render() {
+    
     return (
       <div className="app">
         <Header />
@@ -58,6 +60,7 @@ class App extends Component {
                   setPeople={this.setPeople}
                   peopleData={this.state.peopleData}
                   clickHandler={this.clickHandler}
+                  selected={this.state.selected}
                 />
               )}
             />
@@ -69,6 +72,7 @@ class App extends Component {
                   setPlanets={this.setPlanets}
                   planetData={this.state.planetData}
                   clickHandler={this.clickHandler}
+                  selected={this.state.selected}
                 />
               )}
             />
@@ -80,6 +84,7 @@ class App extends Component {
                   setVehicles={this.setVehicles}
                   vehicleData={this.state.vehicleData}
                   clickHandler={this.clickHandler}
+                  selected={this.state.selected}
                 />
               )}
             />

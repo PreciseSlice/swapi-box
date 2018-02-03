@@ -14,16 +14,20 @@ class People extends Component {
   }
 
   render() {
-    const { peopleData, clickHandler } = this.props;
-    
-    const renderCards = peopleData.map(person => (
-      <Card 
-        data={person} 
-        key={person.name} 
-        clickHandler={clickHandler}  
-      />
-    ));
-    
+    const { peopleData, clickHandler, selected } = this.props;
+
+    const renderCards = peopleData.map(person => {
+      const highlighted = selected.includes(person) ? 'highlighted' : '';
+      return (
+        <Card
+          data={person}
+          key={person.name}
+          clickHandler={clickHandler}
+          highlighted={highlighted}
+        />
+      );
+    });
+
     if (peopleData) {
       return <div className="peopleContainer">{renderCards}</div>;
     } else {
@@ -35,7 +39,10 @@ class People extends Component {
 export default People;
 
 People.propTypes = {
+  
   clickHandler: PropTypes.func.isRequired,
+
+  selected: PropTypes.array.isRequired,
 
   peopleData: PropTypes.arrayOf(
     PropTypes.shape({
@@ -45,5 +52,4 @@ People.propTypes = {
       speciesName: PropTypes.string.isRequired
     }).isRequired
   ).isRequired
-  
 };
