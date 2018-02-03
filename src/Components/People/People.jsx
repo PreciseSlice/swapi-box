@@ -8,7 +8,7 @@ class People extends Component {
   async componentDidMount() {
     const { setPeople, peopleData } = this.props;
     if (peopleData.length < 1) {
-      const peopleData = await getPeople();
+      const peopleData = await getPeople('https://swapi.co/api/people/');
       setPeople(peopleData);
     }
   }

@@ -8,7 +8,7 @@ class Planets extends Component {
   async componentDidMount() {
     const { setPlanets, planetData } = this.props;
     if (planetData.length < 1) {
-      const planetData = await getPlanets();
+      const planetData = await getPlanets('https://swapi.co/api/planets/');
       setPlanets(planetData);
     }
   }
