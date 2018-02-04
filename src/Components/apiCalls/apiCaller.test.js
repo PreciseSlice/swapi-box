@@ -133,7 +133,7 @@ describe('apiCaller', () => {
       expect(result).toEqual(cleanPeople);
     });
 
-    it.skip('getPlanets returns clean planet data as an array of objects', async () => {
+    it('getPlanets returns clean planet data as an array of objects', async () => {
       window.fetch = jest.fn().mockImplementation(() => ({
         status: 200,
         json: () =>
@@ -148,7 +148,7 @@ describe('apiCaller', () => {
       expect(result).toEqual(cleanPlanets);
     });
 
-    it.skip('getVehicles returns clean vehicle data as an array of objects', async () => {
+    it('getVehicles returns clean vehicle data as an array of objects', async () => {
       window.fetch = jest.fn().mockImplementation(() => ({
         status: 200,
         json: () =>

@@ -378,7 +378,7 @@ export const cleanPeople = [
   }
 ];
 
-const allPlanets = {
+export const allPlanets = {
   count: 61,
   next: 'https://swapi.co/api/planets/?page=2',
   previous: null,
@@ -586,15 +586,78 @@ const allPlanets = {
 
 export const cleanPlanets = [
   {
-    name: 'Alderaan',
     climate: 'temperate',
-    terrain: 'grasslands, mountains',
+    name: 'Alderaan',
     population: '2000000000',
-    residents: [undefined, undefined, undefined]
+    residents: ', , ',
+    terrain: 'grasslands, mountains'
+  },
+  {
+    climate: 'temperate, tropical',
+    name: 'Yavin IV',
+    population: '1000',
+    residents: '',
+    terrain: 'jungle, rainforests'
+  },
+  {
+    climate: 'frozen',
+    name: 'Hoth',
+    population: 'unknown',
+    residents: '',
+    terrain: 'tundra, ice caves, mountain ranges'
+  },
+  {
+    climate: 'murky',
+    name: 'Dagobah',
+    population: 'unknown',
+    residents: '',
+    terrain: 'swamp, jungles'
+  },
+  {
+    climate: 'temperate',
+    name: 'Bespin',
+    population: '6000000',
+    residents: '',
+    terrain: 'gas giant'
+  },
+  {
+    climate: 'temperate',
+    name: 'Endor',
+    population: '30000000',
+    residents: '',
+    terrain: 'forests, mountains, lakes'
+  },
+  {
+    climate: 'temperate',
+    name: 'Naboo',
+    population: '4500000000',
+    residents: ', , , , , , , , , , ',
+    terrain: 'grassy hills, swamps, forests, mountains'
+  },
+  {
+    climate: 'temperate',
+    name: 'Coruscant',
+    population: '1000000000000',
+    residents: ', , ',
+    terrain: 'cityscape, mountains'
+  },
+  {
+    climate: 'temperate',
+    name: 'Kamino',
+    population: '1000000000',
+    residents: ', , ',
+    terrain: 'ocean'
+  },
+  {
+    climate: 'temperate, arid',
+    name: 'Geonosis',
+    population: '100000000000',
+    residents: '',
+    terrain: 'rock, desert, mountain, barren'
   }
 ];
 
-const allVehicles = {
+export const allVehicles = {
   count: 39,
   next: 'https://swapi.co/api/vehicles/?page=2',
   previous: null,
@@ -791,7 +854,68 @@ const allVehicles = {
   ]
 };
 
-export const cleanVehicles = {};
+export const cleanVehicles = [
+  {
+    model: 'Digger Crawler',
+    name: 'Sand Crawler',
+    passengers: '30',
+    vehicleClass: 'wheeled'
+  },
+  {
+    model: 'T-16 skyhopper',
+    name: 'T-16 skyhopper',
+    passengers: '1',
+    vehicleClass: 'repulsorcraft'
+  },
+  {
+    model: 'X-34 landspeeder',
+    name: 'X-34 landspeeder',
+    passengers: '1',
+    vehicleClass: 'repulsorcraft'
+  },
+  {
+    model: 'Twin Ion Engine/Ln Starfighter',
+    name: 'TIE/LN starfighter',
+    passengers: '0',
+    vehicleClass: 'starfighter'
+  },
+  {
+    model: 't-47 airspeeder',
+    name: 'Snowspeeder',
+    passengers: '0',
+    vehicleClass: 'airspeeder'
+  },
+  {
+    model: 'TIE/sa bomber',
+    name: 'TIE bomber',
+    passengers: '0',
+    vehicleClass: 'space/planetary bomber'
+  },
+  {
+    model: 'All Terrain Armored Transport',
+    name: 'AT-AT',
+    passengers: '40',
+    vehicleClass: 'assault walker'
+  },
+  {
+    model: 'All Terrain Scout Transport',
+    name: 'AT-ST',
+    passengers: '0',
+    vehicleClass: 'walker'
+  },
+  {
+    model: 'Storm IV Twin-Pod',
+    name: 'Storm IV Twin-Pod cloud car',
+    passengers: '0',
+    vehicleClass: 'repulsorcraft'
+  },
+  {
+    model: 'Modified Luxury Sail Barge',
+    name: 'Sail barge',
+    passengers: '500',
+    vehicleClass: 'sail barge'
+  }
+];
 
 export const urlArray = [
   'https://swapi.co/api/people/5/',
