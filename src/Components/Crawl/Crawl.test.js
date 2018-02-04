@@ -3,7 +3,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Crawl from './Crawl';
 import { shallow, mount, render } from 'enzyme';
-import { setFlagsFromString } from 'v8';
 
 describe('Crawl', () => {
   let wrapper;
@@ -39,7 +38,6 @@ describe('Crawl', () => {
     expect(wrapper.instance().romanize(5)).toEqual('V')
     expect(wrapper.instance().romanize(7)).toEqual('VII')
   });
-
 
 
 });
