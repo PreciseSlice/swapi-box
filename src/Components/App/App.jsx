@@ -97,7 +97,12 @@ class App extends Component {
 
             <Route
               path="/favorites"
-              render={() => <Favorites favorites={this.state.favorites} />}
+              render={() => (
+                <Favorites 
+                  favorites={this.state.favorites}
+                  clickHandler={this.clickHandler} 
+                />
+              )}
             />
           </Switch>
         </div>
