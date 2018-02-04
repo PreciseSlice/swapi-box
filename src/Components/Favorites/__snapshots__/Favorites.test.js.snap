@@ -1,0 +1,168 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Favorites Favorites Exist and matches snapshot 1`] = `
+<Favorites
+  clickHandler={[Function]}
+  favorites={
+    Array [
+      Object {
+        "climate": "temperate",
+        "name": "Alderaan",
+        "population": "2000000000",
+        "terrain": "grasslands, mountains",
+      },
+      Object {
+        "homeworld": "planet",
+        "name": "Luke Skywalker",
+        "population": 1000000,
+        "species": Array [
+          "human",
+        ],
+      },
+      Object {
+        "homeworld": "planet",
+        "name": "C-3PO",
+        "population": 100000,
+        "species": Array [
+          "droid",
+        ],
+      },
+    ]
+  }
+>
+  <div
+    className="favoriteContainer"
+  >
+    <Card
+      clickHandler={[Function]}
+      data={
+        Object {
+          "climate": "temperate",
+          "name": "Alderaan",
+          "population": "2000000000",
+          "terrain": "grasslands, mountains",
+        }
+      }
+      key="Alderaan"
+    >
+      <div
+        className="card undefined"
+      >
+        <h1>
+          Alderaan
+        </h1>
+        <ul>
+          <li
+            key="function now() { [native code] }0"
+          >
+            climate: temperate
+          </li>
+          <li
+            key="function now() { [native code] }1"
+          >
+            terrain: grasslands, mountains
+          </li>
+          <li
+            key="function now() { [native code] }2"
+          >
+            population: 2000000000
+          </li>
+        </ul>
+        <button
+          onClick={[Function]}
+        >
+          Favorite
+        </button>
+      </div>
+    </Card>
+    <Card
+      clickHandler={[Function]}
+      data={
+        Object {
+          "homeworld": "planet",
+          "name": "Luke Skywalker",
+          "population": 1000000,
+          "species": Array [
+            "human",
+          ],
+        }
+      }
+      key="Luke Skywalker"
+    >
+      <div
+        className="card undefined"
+      >
+        <h1>
+          Luke Skywalker
+        </h1>
+        <ul>
+          <li
+            key="function now() { [native code] }0"
+          >
+            homeworld: planet
+          </li>
+          <li
+            key="function now() { [native code] }1"
+          >
+            population: 1000000
+          </li>
+          <li
+            key="function now() { [native code] }2"
+          >
+            species: human
+          </li>
+        </ul>
+        <button
+          onClick={[Function]}
+        >
+          Favorite
+        </button>
+      </div>
+    </Card>
+    <Card
+      clickHandler={[Function]}
+      data={
+        Object {
+          "homeworld": "planet",
+          "name": "C-3PO",
+          "population": 100000,
+          "species": Array [
+            "droid",
+          ],
+        }
+      }
+      key="C-3PO"
+    >
+      <div
+        className="card undefined"
+      >
+        <h1>
+          C-3PO
+        </h1>
+        <ul>
+          <li
+            key="function now() { [native code] }0"
+          >
+            homeworld: planet
+          </li>
+          <li
+            key="function now() { [native code] }1"
+          >
+            population: 100000
+          </li>
+          <li
+            key="function now() { [native code] }2"
+          >
+            species: droid
+          </li>
+        </ul>
+        <button
+          onClick={[Function]}
+        >
+          Favorite
+        </button>
+      </div>
+    </Card>
+  </div>
+</Favorites>
+`;
