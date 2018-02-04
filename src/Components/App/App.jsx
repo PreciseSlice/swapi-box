@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import './App.css';
-import Header from '../Header/Header.jsx';
 import Nav from '../Nav/Nav.jsx';
 import People from '../People/People.jsx';
 import Planets from '../Planets/Planets.jsx';
@@ -44,7 +43,9 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <Header />
+        <div className="header">
+          <h1>SWapi-box</h1>
+        </div>
         <Nav favCount={this.state.favorites.length} />
         <div className="main">
           <Switch>

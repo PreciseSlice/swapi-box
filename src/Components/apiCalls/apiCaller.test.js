@@ -102,7 +102,7 @@ describe('apiCaller', () => {
     });
   });
 
-  describe('Call and clean functions', () => {
+  describe('Cleaner functions', () => {
     it('getFilms returns clean film data as an object', async () => {
       window.fetch = jest.fn().mockImplementation(() => ({
         status: 200,
