@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card Exist and matches snapshot 1`] = `
+<div
+  className="card undefined"
+>
+  <h1>
+    Alderaan
+  </h1>
+  <ul>
+    <li
+      key="function now() { [native code] }0"
+    >
+      climate: temperate
+    </li>
+    <li
+      key="function now() { [native code] }1"
+    >
+      terrain: grasslands, mountains
+    </li>
+    <li
+      key="function now() { [native code] }2"
+    >
+      population: 2000000000
+    </li>
+  </ul>
+  <button
+    onClick={[Function]}
+  >
+    Favorite
+  </button>
+</div>
+`;
