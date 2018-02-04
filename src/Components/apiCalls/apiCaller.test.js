@@ -1,16 +1,28 @@
 /* eslint-disable */
 import React from 'react';
-import { callFetch, getFilms, getPeople, getPlanets, getVehicles } from './apiCaller';
-import { films, people, planets, vehicles } from './apiMockData';
+import {
+  callFetch,
+  getFilms,
+  getPeople,
+  getPlanets,
+  getVehicles
+} from './apiCaller';
+import {
+  allFilms,
+  cleanFilms,
+  allPeople,
+  cleanPeople,
+  planets,
+  vehicles
+} from './apiMockData';
 
 describe('apiCaller', () => {
-
-  it('has functions', () => {
+  it('has multiple functions', () => {
     expect(callFetch).toBeDefined();
     expect(getFilms).toBeDefined();
     expect(getPeople).toBeDefined();
-    expect(getPlanets).toBeDefined()
-    expect(getVehicles).toBeDefined()
+    expect(getPlanets).toBeDefined();
+    expect(getVehicles).toBeDefined();
   });
 
   describe('callFetch', () => {
@@ -19,29 +31,48 @@ describe('apiCaller', () => {
 
       window.fetch = jest.fn().mockImplementation(() => ({
         status: 200,
-        json: () => new Promise((resolve, reject) => {
-          resolve(films)
-        })
-      }))
-      callFetch(expectedParams)
+        json: () =>
+          new Promise((resolve, reject) => {
+            resolve(allFilms);
+          })
+      }));
+      callFetch(expectedParams);
       expect(window.fetch).toHaveBeenCalledWith(expectedParams);
     });
 
     it('returns a data object if the server returns a status of ok', () => {
       const url = 'https://swapi.co/api/films/';
 
-      expect(callFetch(url)).resolves.toEqual(films)
-    })
+      expect(callFetch(url)).resolves.toEqual(allFilms);
+    });
 
     it('throws an error if the data is not fetched ', async () => {
       const url = 'https://swapi.co/api/films/';
 
-      window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-        status: 500
-      }))
+      window.fetch = jest.fn().mockImplementation(() =>
+        Promise.resolve({
+          status: 500
+        })
+      );
 
-      expect(callFetch(url)).resolves.toEqual(Error('callFetch failed to fetch data'))
+      expect(callFetch(url)).resolves.toEqual(
+        Error('callFetch failed to fetch data')
+      );
     });
   });
 
+  describe('getFilms', () => {
+    it('it returns clean film data as an array of objects', async () => {
+      window.fetch = jest.fn().mockImplementation(() => ({
+        status: 200,
+        json: () =>
+          new Promise((resolve, reject) => {
+            resolve(allFilms);
+          })
+      }));
+      const url = 'https://swapi.co/api/films/';
+      const result = await getFilms(url);
+      expect(result).toEqual(cleanFilms);
+    });
+  });
 });

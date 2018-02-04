@@ -1,5 +1,5 @@
 /* eslint-disable */
-export const films = {
+export const allFilms = {
   title: 'A New Hope',
   episode_id: 4,
   opening_crawl:
@@ -60,7 +60,15 @@ export const films = {
   url: 'https://swapi.co/api/films/1/'
 };
 
-export const people = {
+export const cleanFilms = {
+  title: 'A New Hope',
+  episodeId: 4,
+  openingCrawl:
+    "It is a period of civil war.\r\nRebel spaceships, striking\r\nfrom a hidden base, have won\r\ntheir first victory against\r\nthe evil Galactic Empire.\r\n\r\nDuring the battle, Rebel\r\nspies managed to steal secret\r\nplans to the Empire's\r\nultimate weapon, the DEATH\r\nSTAR, an armored space\r\nstation with enough power\r\nto destroy an entire planet.\r\n\r\nPursued by the Empire's\r\nsinister agents, Princess\r\nLeia races home aboard her\r\nstarship, custodian of the\r\nstolen plans that can save her\r\npeople and restore\r\nfreedom to the galaxy....",
+  releaseDate: '1977-05-25'
+};
+
+export const allPeople = {
   count: 87,
   next: 'https://swapi.co/api/people/?page=2',
   previous: null,
@@ -306,6 +314,69 @@ export const people = {
     }
   ]
 };
+
+export const cleanPeople = [
+  {
+    name: 'Luke Skywalker',
+    homeworld: 'Tatooine',
+    population: '200000',
+    speciesName: 'Human'
+  },
+  {
+    name: 'C-3PO',
+    homeworld: 'Tatooine',
+    population: '200000',
+    speciesName: 'Droid'
+  },
+  {
+    name: 'R2-D2',
+    homeworld: 'Naboo',
+    population: '4500000000',
+    speciesName: 'Droid'
+  },
+  {
+    name: 'Darth Vader',
+    homeworld: 'Tatooine',
+    population: '200000',
+    speciesName: 'Human'
+  },
+  {
+    name: 'Leia Organa',
+    homeworld: 'Alderaan',
+    population: '2000000000',
+    speciesName: 'Human'
+  },
+  {
+    name: 'Owen Lars',
+    homeworld: 'Tatooine',
+    population: '200000',
+    speciesName: 'Human'
+  },
+  {
+    name: 'Beru Whitesun lars',
+    homeworld: 'Tatooine',
+    population: '200000',
+    speciesName: 'Human'
+  },
+  {
+    name: 'R5-D4',
+    homeworld: 'Tatooine',
+    population: '200000',
+    speciesName: 'Droid'
+  },
+  {
+    name: 'Biggs Darklighter',
+    homeworld: 'Tatooine',
+    population: '200000',
+    speciesName: 'Human'
+  },
+  {
+    name: 'Obi-Wan Kenobi',
+    homeworld: 'Stewjon',
+    population: 'unknown',
+    speciesName: 'Human'
+  }
+];
 
 const planets = {
   count: 61,
