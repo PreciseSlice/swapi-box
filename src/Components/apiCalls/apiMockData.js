@@ -317,68 +317,68 @@ export const allPeople = {
 
 export const cleanPeople = [
   {
+    homeworld: undefined,
     name: 'Luke Skywalker',
-    homeworld: 'Tatooine',
-    population: '200000',
-    speciesName: 'Human'
+    population: undefined,
+    species: [undefined]
   },
   {
+    homeworld: undefined,
     name: 'C-3PO',
-    homeworld: 'Tatooine',
-    population: '200000',
-    speciesName: 'Droid'
+    population: undefined,
+    species: [undefined]
   },
   {
+    homeworld: undefined,
     name: 'R2-D2',
-    homeworld: 'Naboo',
-    population: '4500000000',
-    speciesName: 'Droid'
+    population: undefined,
+    species: [undefined]
   },
   {
+    homeworld: undefined,
     name: 'Darth Vader',
-    homeworld: 'Tatooine',
-    population: '200000',
-    speciesName: 'Human'
+    population: undefined,
+    species: [undefined]
   },
   {
+    homeworld: undefined,
     name: 'Leia Organa',
-    homeworld: 'Alderaan',
-    population: '2000000000',
-    speciesName: 'Human'
+    population: undefined,
+    species: [undefined]
   },
   {
+    homeworld: undefined,
     name: 'Owen Lars',
-    homeworld: 'Tatooine',
-    population: '200000',
-    speciesName: 'Human'
+    population: undefined,
+    species: [undefined]
   },
   {
+    homeworld: undefined,
     name: 'Beru Whitesun lars',
-    homeworld: 'Tatooine',
-    population: '200000',
-    speciesName: 'Human'
+    population: undefined,
+    species: [undefined]
   },
   {
+    homeworld: undefined,
     name: 'R5-D4',
-    homeworld: 'Tatooine',
-    population: '200000',
-    speciesName: 'Droid'
+    population: undefined,
+    species: [undefined]
   },
   {
+    homeworld: undefined,
     name: 'Biggs Darklighter',
-    homeworld: 'Tatooine',
-    population: '200000',
-    speciesName: 'Human'
+    population: undefined,
+    species: [undefined]
   },
   {
+    homeworld: undefined,
     name: 'Obi-Wan Kenobi',
-    homeworld: 'Stewjon',
-    population: 'unknown',
-    speciesName: 'Human'
+    population: undefined,
+    species: [undefined]
   }
 ];
 
-const planets = {
+const allPlanets = {
   count: 61,
   next: 'https://swapi.co/api/planets/?page=2',
   previous: null,
@@ -584,7 +584,17 @@ const planets = {
   ]
 };
 
-const vehicles = {
+export const cleanPlanets = [
+  {
+    name: 'Alderaan',
+    climate: 'temperate',
+    terrain: 'grasslands, mountains',
+    population: '2000000000',
+    residents: [undefined, undefined, undefined]
+  }
+];
+
+const allVehicles = {
   count: 39,
   next: 'https://swapi.co/api/vehicles/?page=2',
   previous: null,
@@ -780,3 +790,15 @@ const vehicles = {
     }
   ]
 };
+
+export const cleanVehicles = {};
+
+export const urlArray = [
+  'https://swapi.co/api/people/5/',
+  'https://swapi.co/api/people/68/',
+  'https://swapi.co/api/people/81/'
+];
+
+export const residentsArray = [undefined, undefined, undefined];
+
+export const homeworldObject = { homeworld: undefined, population: undefined };
