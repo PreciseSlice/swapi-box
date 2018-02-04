@@ -90,7 +90,7 @@ export const getVehicles = async url => {
   try {
     const fetchVehicleData = await callFetch(url);
 
-    const vehicleMap = fetchVehicleData.results.map(async vehicle => {
+    const vehicleMap = fetchVehicleData.results.map(vehicle => {
 
       return {
         name: vehicle.name,
@@ -105,3 +105,4 @@ export const getVehicles = async url => {
     return error;
   }
 };
+
