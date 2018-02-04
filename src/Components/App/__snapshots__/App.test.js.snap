@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Exist and matches snapshot 1`] = `
+<div
+  className="app"
+>
+  <Header />
+  <Nav
+    favCount={0}
+  />
+  <div
+    className="main"
+  >
+    <Switch>
+      <Route
+        exact={true}
+        path="/"
+        render={[Function]}
+      />
+      <Route
+        path="/people"
+        render={[Function]}
+      />
+      <Route
+        path="/planets"
+        render={[Function]}
+      />
+      <Route
+        path="/vehicles"
+        render={[Function]}
+      />
+      <Route
+        path="/favorites"
+        render={[Function]}
+      />
+    </Switch>
+  </div>
+</div>
+`;
