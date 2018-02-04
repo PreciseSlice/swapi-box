@@ -1,19 +1,28 @@
 /* eslint-disable */
 import React from 'react';
+
 import {
   callFetch,
   getFilms,
   getPeople,
   getPlanets,
-  getVehicles
+  getVehicles,
+  getHomeworld,
+  getName
 } from './apiCaller';
+
 import {
   allFilms,
   cleanFilms,
   allPeople,
   cleanPeople,
-  planets,
-  vehicles
+  allPlanets,
+  cleanPlanets,
+  allVehicles,
+  cleanVehicles,
+  urlArray,
+  residentsArray,
+  homeworldObject
 } from './apiMockData';
 
 describe('apiCaller', () => {
@@ -23,6 +32,8 @@ describe('apiCaller', () => {
     expect(getPeople).toBeDefined();
     expect(getPlanets).toBeDefined();
     expect(getVehicles).toBeDefined();
+    expect(getHomeworld).toBeDefined();
+    expect(getName).toBeDefined();
   });
 
   describe('callFetch', () => {
@@ -61,8 +72,38 @@ describe('apiCaller', () => {
     });
   });
 
-  describe('getFilms', () => {
-    it('it returns clean film data as an array of objects', async () => {
+  describe('helper functions', () => {
+    it('getHomeworld calls an endpoint and returns an object', async () => {
+      window.fetch = jest.fn().mockImplementation(() => ({
+        status: 200,
+        json: () =>
+          new Promise((resolve, reject) => {
+            resolve(urlArray);
+          })
+      }));
+
+      const result = await getHomeworld(urlArray);
+
+      expect(result).toEqual(homeworldObject);
+    });
+
+    it('getName calls an endpoint and returns an array of names', async () => {
+      window.fetch = jest.fn().mockImplementation(() => ({
+        status: 200,
+        json: () =>
+          new Promise((resolve, reject) => {
+            resolve(urlArray);
+          })
+      }));
+
+      const result = await getName(urlArray);
+
+      expect(result).toEqual(residentsArray);
+    });
+  });
+
+  describe('Call and clean functions', () => {
+    it('getFilms returns clean film data as an object', async () => {
       window.fetch = jest.fn().mockImplementation(() => ({
         status: 200,
         json: () =>
@@ -70,9 +111,55 @@ describe('apiCaller', () => {
             resolve(allFilms);
           })
       }));
+
       const url = 'https://swapi.co/api/films/';
       const result = await getFilms(url);
+
       expect(result).toEqual(cleanFilms);
+    });
+
+    it('GetPeople returns clean people data as an array of objects', async () => {
+      window.fetch = jest.fn().mockImplementation(() => ({
+        status: 200,
+        json: () =>
+          new Promise((resolve, reject) => {
+            resolve(allPeople);
+          })
+      }));
+
+      const url = 'https://swapi.co/api/people/';
+      const result = await getPeople(url);
+
+      expect(result).toEqual(cleanPeople);
+    });
+
+    it.skip('getPlanets returns clean planet data as an array of objects', async () => {
+      window.fetch = jest.fn().mockImplementation(() => ({
+        status: 200,
+        json: () =>
+          new Promise((resolve, reject) => {
+            resolve(allPlanets);
+          })
+      }));
+
+      const url = 'https://swapi.co/api/planets/';
+      const result = await getPlanets(url);
+
+      expect(result).toEqual(cleanPlanets);
+    });
+
+    it.skip('getVehicles returns clean vehicle data as an array of objects', async () => {
+      window.fetch = jest.fn().mockImplementation(() => ({
+        status: 200,
+        json: () =>
+          new Promise((resolve, reject) => {
+            resolve(allVehicles);
+          })
+      }));
+      const url = 'https://swapi.co/api/vehicles/';
+      const result = await getVehicles(url);
+
+      expect(result).toEqual(cleanVehicles);
     });
   });
 });
