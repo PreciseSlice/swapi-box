@@ -37,7 +37,6 @@ class Planets extends Component {
 }
 
 Planets.propTypes = {
-
   clickHandler: PropTypes.func.isRequired,
 
   favorites: PropTypes.array.isRequired,
@@ -46,16 +45,12 @@ Planets.propTypes = {
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       terrain: PropTypes.string.isRequired,
-      population: PropTypes.number.isRequired,
       climate: PropTypes.string.isRequired,
-      residents: PropTypes.arrayOf().isRequired
+      residents: PropTypes.string.isRequired,
+      population: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
+        .isRequired
     }).isRequired
   ).isRequired
 };
-
-// size: PropTypes.oneOfType([
-//   PropTypes.string,
-//   PropTypes.number
-// ]),
 
 export default Planets;

@@ -1,0 +1,571 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Vehicles Exist and matches snapshot 1`] = `
+<Vehicles
+  clickHandler={[Function]}
+  favorites={
+    Array [
+      Object {
+        "model": "Digger Crawler",
+        "name": "Sand Crawler",
+        "passengers": "30",
+        "vehicleClass": "wheeled",
+      },
+      Object {
+        "model": "T-16 skyhopper",
+        "name": "T-16 skyhopper",
+        "passengers": "1",
+        "vehicleClass": "repulsorcraft",
+      },
+      Object {
+        "model": "X-34 landspeeder",
+        "name": "X-34 landspeeder",
+        "passengers": "1",
+        "vehicleClass": "repulsorcraft",
+      },
+      Object {
+        "model": "Twin Ion Engine/Ln Starfighter",
+        "name": "TIE/LN starfighter",
+        "passengers": "0",
+        "vehicleClass": "starfighter",
+      },
+      Object {
+        "model": "t-47 airspeeder",
+        "name": "Snowspeeder",
+        "passengers": "0",
+        "vehicleClass": "airspeeder",
+      },
+      Object {
+        "model": "TIE/sa bomber",
+        "name": "TIE bomber",
+        "passengers": "0",
+        "vehicleClass": "space/planetary bomber",
+      },
+      Object {
+        "model": "All Terrain Armored Transport",
+        "name": "AT-AT",
+        "passengers": "40",
+        "vehicleClass": "assault walker",
+      },
+      Object {
+        "model": "All Terrain Scout Transport",
+        "name": "AT-ST",
+        "passengers": "0",
+        "vehicleClass": "walker",
+      },
+      Object {
+        "model": "Storm IV Twin-Pod",
+        "name": "Storm IV Twin-Pod cloud car",
+        "passengers": "0",
+        "vehicleClass": "repulsorcraft",
+      },
+      Object {
+        "model": "Modified Luxury Sail Barge",
+        "name": "Sail barge",
+        "passengers": "500",
+        "vehicleClass": "sail barge",
+      },
+    ]
+  }
+  setVehicles={[Function]}
+  vehicleData={
+    Array [
+      Object {
+        "model": "Digger Crawler",
+        "name": "Sand Crawler",
+        "passengers": "30",
+        "vehicleClass": "wheeled",
+      },
+      Object {
+        "model": "T-16 skyhopper",
+        "name": "T-16 skyhopper",
+        "passengers": "1",
+        "vehicleClass": "repulsorcraft",
+      },
+      Object {
+        "model": "X-34 landspeeder",
+        "name": "X-34 landspeeder",
+        "passengers": "1",
+        "vehicleClass": "repulsorcraft",
+      },
+      Object {
+        "model": "Twin Ion Engine/Ln Starfighter",
+        "name": "TIE/LN starfighter",
+        "passengers": "0",
+        "vehicleClass": "starfighter",
+      },
+      Object {
+        "model": "t-47 airspeeder",
+        "name": "Snowspeeder",
+        "passengers": "0",
+        "vehicleClass": "airspeeder",
+      },
+      Object {
+        "model": "TIE/sa bomber",
+        "name": "TIE bomber",
+        "passengers": "0",
+        "vehicleClass": "space/planetary bomber",
+      },
+      Object {
+        "model": "All Terrain Armored Transport",
+        "name": "AT-AT",
+        "passengers": "40",
+        "vehicleClass": "assault walker",
+      },
+      Object {
+        "model": "All Terrain Scout Transport",
+        "name": "AT-ST",
+        "passengers": "0",
+        "vehicleClass": "walker",
+      },
+      Object {
+        "model": "Storm IV Twin-Pod",
+        "name": "Storm IV Twin-Pod cloud car",
+        "passengers": "0",
+        "vehicleClass": "repulsorcraft",
+      },
+      Object {
+        "model": "Modified Luxury Sail Barge",
+        "name": "Sail barge",
+        "passengers": "500",
+        "vehicleClass": "sail barge",
+      },
+    ]
+  }
+>
+  <div
+    className="vehicle-container"
+  >
+    <Card
+      clickHandler={[Function]}
+      data={
+        Object {
+          "model": "Digger Crawler",
+          "name": "Sand Crawler",
+          "passengers": "30",
+          "vehicleClass": "wheeled",
+        }
+      }
+      highlighted="highlighted"
+      key="Sand Crawler"
+    >
+      <div
+        className="card highlighted"
+      >
+        <h1>
+          Sand Crawler
+        </h1>
+        <ul>
+          <li
+            key="function now() { [native code] }0"
+          >
+            model: Digger Crawler
+          </li>
+          <li
+            key="function now() { [native code] }1"
+          >
+            passengers: 30
+          </li>
+          <li
+            key="function now() { [native code] }2"
+          >
+            vehicleClass: wheeled
+          </li>
+        </ul>
+        <button
+          onClick={[Function]}
+        >
+          Favorite
+        </button>
+      </div>
+    </Card>
+    <Card
+      clickHandler={[Function]}
+      data={
+        Object {
+          "model": "T-16 skyhopper",
+          "name": "T-16 skyhopper",
+          "passengers": "1",
+          "vehicleClass": "repulsorcraft",
+        }
+      }
+      highlighted="highlighted"
+      key="T-16 skyhopper"
+    >
+      <div
+        className="card highlighted"
+      >
+        <h1>
+          T-16 skyhopper
+        </h1>
+        <ul>
+          <li
+            key="function now() { [native code] }0"
+          >
+            model: T-16 skyhopper
+          </li>
+          <li
+            key="function now() { [native code] }1"
+          >
+            passengers: 1
+          </li>
+          <li
+            key="function now() { [native code] }2"
+          >
+            vehicleClass: repulsorcraft
+          </li>
+        </ul>
+        <button
+          onClick={[Function]}
+        >
+          Favorite
+        </button>
+      </div>
+    </Card>
+    <Card
+      clickHandler={[Function]}
+      data={
+        Object {
+          "model": "X-34 landspeeder",
+          "name": "X-34 landspeeder",
+          "passengers": "1",
+          "vehicleClass": "repulsorcraft",
+        }
+      }
+      highlighted="highlighted"
+      key="X-34 landspeeder"
+    >
+      <div
+        className="card highlighted"
+      >
+        <h1>
+          X-34 landspeeder
+        </h1>
+        <ul>
+          <li
+            key="function now() { [native code] }0"
+          >
+            model: X-34 landspeeder
+          </li>
+          <li
+            key="function now() { [native code] }1"
+          >
+            passengers: 1
+          </li>
+          <li
+            key="function now() { [native code] }2"
+          >
+            vehicleClass: repulsorcraft
+          </li>
+        </ul>
+        <button
+          onClick={[Function]}
+        >
+          Favorite
+        </button>
+      </div>
+    </Card>
+    <Card
+      clickHandler={[Function]}
+      data={
+        Object {
+          "model": "Twin Ion Engine/Ln Starfighter",
+          "name": "TIE/LN starfighter",
+          "passengers": "0",
+          "vehicleClass": "starfighter",
+        }
+      }
+      highlighted="highlighted"
+      key="TIE/LN starfighter"
+    >
+      <div
+        className="card highlighted"
+      >
+        <h1>
+          TIE/LN starfighter
+        </h1>
+        <ul>
+          <li
+            key="function now() { [native code] }0"
+          >
+            model: Twin Ion Engine/Ln Starfighter
+          </li>
+          <li
+            key="function now() { [native code] }1"
+          >
+            passengers: 0
+          </li>
+          <li
+            key="function now() { [native code] }2"
+          >
+            vehicleClass: starfighter
+          </li>
+        </ul>
+        <button
+          onClick={[Function]}
+        >
+          Favorite
+        </button>
+      </div>
+    </Card>
+    <Card
+      clickHandler={[Function]}
+      data={
+        Object {
+          "model": "t-47 airspeeder",
+          "name": "Snowspeeder",
+          "passengers": "0",
+          "vehicleClass": "airspeeder",
+        }
+      }
+      highlighted="highlighted"
+      key="Snowspeeder"
+    >
+      <div
+        className="card highlighted"
+      >
+        <h1>
+          Snowspeeder
+        </h1>
+        <ul>
+          <li
+            key="function now() { [native code] }0"
+          >
+            model: t-47 airspeeder
+          </li>
+          <li
+            key="function now() { [native code] }1"
+          >
+            passengers: 0
+          </li>
+          <li
+            key="function now() { [native code] }2"
+          >
+            vehicleClass: airspeeder
+          </li>
+        </ul>
+        <button
+          onClick={[Function]}
+        >
+          Favorite
+        </button>
+      </div>
+    </Card>
+    <Card
+      clickHandler={[Function]}
+      data={
+        Object {
+          "model": "TIE/sa bomber",
+          "name": "TIE bomber",
+          "passengers": "0",
+          "vehicleClass": "space/planetary bomber",
+        }
+      }
+      highlighted="highlighted"
+      key="TIE bomber"
+    >
+      <div
+        className="card highlighted"
+      >
+        <h1>
+          TIE bomber
+        </h1>
+        <ul>
+          <li
+            key="function now() { [native code] }0"
+          >
+            model: TIE/sa bomber
+          </li>
+          <li
+            key="function now() { [native code] }1"
+          >
+            passengers: 0
+          </li>
+          <li
+            key="function now() { [native code] }2"
+          >
+            vehicleClass: space/planetary bomber
+          </li>
+        </ul>
+        <button
+          onClick={[Function]}
+        >
+          Favorite
+        </button>
+      </div>
+    </Card>
+    <Card
+      clickHandler={[Function]}
+      data={
+        Object {
+          "model": "All Terrain Armored Transport",
+          "name": "AT-AT",
+          "passengers": "40",
+          "vehicleClass": "assault walker",
+        }
+      }
+      highlighted="highlighted"
+      key="AT-AT"
+    >
+      <div
+        className="card highlighted"
+      >
+        <h1>
+          AT-AT
+        </h1>
+        <ul>
+          <li
+            key="function now() { [native code] }0"
+          >
+            model: All Terrain Armored Transport
+          </li>
+          <li
+            key="function now() { [native code] }1"
+          >
+            passengers: 40
+          </li>
+          <li
+            key="function now() { [native code] }2"
+          >
+            vehicleClass: assault walker
+          </li>
+        </ul>
+        <button
+          onClick={[Function]}
+        >
+          Favorite
+        </button>
+      </div>
+    </Card>
+    <Card
+      clickHandler={[Function]}
+      data={
+        Object {
+          "model": "All Terrain Scout Transport",
+          "name": "AT-ST",
+          "passengers": "0",
+          "vehicleClass": "walker",
+        }
+      }
+      highlighted="highlighted"
+      key="AT-ST"
+    >
+      <div
+        className="card highlighted"
+      >
+        <h1>
+          AT-ST
+        </h1>
+        <ul>
+          <li
+            key="function now() { [native code] }0"
+          >
+            model: All Terrain Scout Transport
+          </li>
+          <li
+            key="function now() { [native code] }1"
+          >
+            passengers: 0
+          </li>
+          <li
+            key="function now() { [native code] }2"
+          >
+            vehicleClass: walker
+          </li>
+        </ul>
+        <button
+          onClick={[Function]}
+        >
+          Favorite
+        </button>
+      </div>
+    </Card>
+    <Card
+      clickHandler={[Function]}
+      data={
+        Object {
+          "model": "Storm IV Twin-Pod",
+          "name": "Storm IV Twin-Pod cloud car",
+          "passengers": "0",
+          "vehicleClass": "repulsorcraft",
+        }
+      }
+      highlighted="highlighted"
+      key="Storm IV Twin-Pod cloud car"
+    >
+      <div
+        className="card highlighted"
+      >
+        <h1>
+          Storm IV Twin-Pod cloud car
+        </h1>
+        <ul>
+          <li
+            key="function now() { [native code] }0"
+          >
+            model: Storm IV Twin-Pod
+          </li>
+          <li
+            key="function now() { [native code] }1"
+          >
+            passengers: 0
+          </li>
+          <li
+            key="function now() { [native code] }2"
+          >
+            vehicleClass: repulsorcraft
+          </li>
+        </ul>
+        <button
+          onClick={[Function]}
+        >
+          Favorite
+        </button>
+      </div>
+    </Card>
+    <Card
+      clickHandler={[Function]}
+      data={
+        Object {
+          "model": "Modified Luxury Sail Barge",
+          "name": "Sail barge",
+          "passengers": "500",
+          "vehicleClass": "sail barge",
+        }
+      }
+      highlighted="highlighted"
+      key="Sail barge"
+    >
+      <div
+        className="card highlighted"
+      >
+        <h1>
+          Sail barge
+        </h1>
+        <ul>
+          <li
+            key="function now() { [native code] }0"
+          >
+            model: Modified Luxury Sail Barge
+          </li>
+          <li
+            key="function now() { [native code] }1"
+          >
+            passengers: 500
+          </li>
+          <li
+            key="function now() { [native code] }2"
+          >
+            vehicleClass: sail barge
+          </li>
+        </ul>
+        <button
+          onClick={[Function]}
+        >
+          Favorite
+        </button>
+      </div>
+    </Card>
+  </div>
+</Vehicles>
+`;

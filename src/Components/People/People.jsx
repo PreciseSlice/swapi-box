@@ -51,9 +51,4 @@ People.propTypes = {
   ).isRequired
 };
 
-// size: PropTypes.oneOfType([
-//   PropTypes.string,
-//   PropTypes.number
-// ]),
-
 export default People;
