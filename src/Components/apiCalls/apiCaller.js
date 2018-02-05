@@ -11,30 +11,30 @@ export const callFetch = async url => {
 };
 
 export const getHomeworld = async url => {
-  try{
+  try {
     const homeworld = await callFetch(url);
-  
+
     return {
       homeworld: homeworld.name,
       population: homeworld.population
     };
-  } catch(er) {
+  } catch (er) {
     const error = new Error('getHomeworld failed to fetch data');
     return error;
   }
 };
 
 export const getName = async url => {
-  try{
+  try {
     const unresolvedPromises = url.map(async url => {
       const eachName = await callFetch(url);
-  
+
       return eachName.name;
     });
     return Promise.all(unresolvedPromises);
-  } catch(er) {
-      const error = new Error('getName failed to fetch data');
-      return error;
+  } catch (er) {
+    const error = new Error('getName failed to fetch data');
+    return error;
   }
 };
 
@@ -101,7 +101,6 @@ export const getVehicles = async url => {
     const fetchVehicleData = await callFetch(url);
 
     const vehicleMap = fetchVehicleData.results.map(vehicle => {
-
       return {
         name: vehicle.name,
         model: vehicle.model,
@@ -115,4 +114,3 @@ export const getVehicles = async url => {
     return error;
   }
 };
-
