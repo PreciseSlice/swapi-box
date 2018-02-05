@@ -13,7 +13,6 @@ class People extends Component {
     }
   }
 
-  // can the render be refactored to a return?
   render() {
     const { peopleData, clickHandler, favorites } = this.props;
 
@@ -38,19 +37,23 @@ class People extends Component {
 }
 
 People.propTypes = {
-  
   clickHandler: PropTypes.func.isRequired,
-  
+
   favorites: PropTypes.array.isRequired,
-  
+
   peopleData: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
-      //homeWolrd: PropTypes.string.isRequired,
-      //population: PropTypes.number.isRequired,
+      homeWolrd: PropTypes.string,
+      population: PropTypes.number.isRequired,
       speciesName: PropTypes.string.isRequired
     }).isRequired
   ).isRequired
 };
+
+// size: PropTypes.oneOfType([
+//   PropTypes.string,
+//   PropTypes.number
+// ]),
 
 export default People;

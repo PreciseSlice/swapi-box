@@ -30,7 +30,7 @@ describe('App', () => {
     expect(wrapper.state().favorites).toEqual([]);
   });
 
-  it('Have a methods for setting data to state', () => {
+  it('Have methods for setting data to state', () => {
     expect(wrapper.state().filmData).toEqual({});
     expect(wrapper.state().peopleData).toEqual([]);
     expect(wrapper.state().planetData).toEqual([]);
@@ -47,7 +47,7 @@ describe('App', () => {
     expect(wrapper.state().vehicleData).toEqual(cleanVehicles);
   });
 
-  it('Have a click handler which puts clicked objects in state and removes them if they are clicked oncle more', () => {
+  it('Have a click handler which puts clicked objects in state and removes them if they are clicked once more', () => {
     const cardProp = { name: 'Alderaan' };
 
     expect(wrapper.state().favorites).toEqual([]);

@@ -46,11 +46,16 @@ Planets.propTypes = {
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       terrain: PropTypes.string.isRequired,
-      //population: PropTypes.number.isRequired, //somtimes a string
-      climate: PropTypes.string.isRequired
-      //residents: PropTypes.arrayOf().isRequired,
+      population: PropTypes.number.isRequired,
+      climate: PropTypes.string.isRequired,
+      residents: PropTypes.arrayOf().isRequired
     }).isRequired
   ).isRequired
 };
+
+// size: PropTypes.oneOfType([
+//   PropTypes.string,
+//   PropTypes.number
+// ]),
 
 export default Planets;
