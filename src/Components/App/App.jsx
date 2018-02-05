@@ -49,6 +49,7 @@ class App extends Component {
         <Nav favCount={this.state.favorites.length} />
         <div className="main">
           <Switch>
+
             <Route
               exact
               path="/"
@@ -105,6 +106,7 @@ class App extends Component {
                 />
               )}
             />
+            
           </Switch>
         </div>
       </div>
