@@ -44,7 +44,7 @@ class App extends Component {
     return (
       <div className="app">
         <div className="header">
-          <h1>SWapi-box</h1>
+          <h1>swapi-box</h1>
         </div>
         <Nav favCount={this.state.favorites.length} />
         <div className="main">

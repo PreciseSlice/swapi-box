@@ -3,8 +3,7 @@
   width: 100%; }
 
 .main {
-  border: 2px solid #feda4a;
-  height: 450px;
+  height: 505px;
   margin: 40px 40px; }
 
 .header {
@@ -13,6 +12,8 @@
   justify-content: center; }
   .header h1 {
     color: #feda4a;
-    font-size: 5em; }
+    letter-spacing: 0.25em;
+    font-size: 5em;
+    font-weight: 600; }
   .header button {
     margin-left: 20px; }

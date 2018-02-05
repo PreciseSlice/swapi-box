@@ -7,19 +7,19 @@ const Nav = ({ favCount }) => {
   return (
     <div className="nav">
       <button>
-        <NavLink to="/">Opening Crawl</NavLink>
+        <NavLink to="/">home</NavLink>
       </button>
       <button>
-        <NavLink to="/people">People</NavLink>
+        <NavLink to="/people">people</NavLink>
       </button>
       <button>
-        <NavLink to="/planets">Planets</NavLink>
+        <NavLink to="/planets">planets</NavLink>
       </button>
       <button>
-        <NavLink to="/vehicles">Vehicles</NavLink>
+        <NavLink to="/vehicles">vehicles</NavLink>
       </button>
       <button>
-        <NavLink to="/favorites">View Favorites {favCount}</NavLink>
+        <NavLink to="/favorites">favorites {favCount}</NavLink>
       </button>
     </div>
   );
