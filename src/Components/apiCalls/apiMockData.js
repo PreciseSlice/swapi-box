@@ -926,3 +926,18 @@ export const urlArray = [
 export const residentsArray = [undefined, undefined, undefined];
 
 export const homeworldObject = { homeworld: undefined, population: undefined };
+
+export const peopleData = [
+  {
+    homeworld: 'planet',
+    name: 'Luke Skywalker',
+    population: 100,
+    speciesName: 'human'
+  },
+  {
+    homeworld: 'planet',
+    name: 'C-3PO',
+    population: 12,
+    speciesName: 'droid'
+  }
+]

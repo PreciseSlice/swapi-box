@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`People Exist and matches snapshot 1`] = `
+<div
+  className="peopleContainer"
+>
+  <Card
+    clickHandler={[Function]}
+    data={
+      Object {
+        "homeworld": "planet",
+        "name": "Luke Skywalker",
+        "population": 100,
+        "speciesName": "human",
+      }
+    }
+    highlighted="highlighted"
+    key="Luke Skywalker"
+  />
+  <Card
+    clickHandler={[Function]}
+    data={
+      Object {
+        "homeworld": "planet",
+        "name": "C-3PO",
+        "population": 12,
+        "speciesName": "droid",
+      }
+    }
+    highlighted="highlighted"
+    key="C-3PO"
+  />
+</div>
+`;
