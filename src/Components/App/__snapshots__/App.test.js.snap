@@ -4,7 +4,13 @@ exports[`App Exist and matches snapshot 1`] = `
 <div
   className="app"
 >
-  <Header />
+  <div
+    className="header"
+  >
+    <h1>
+      SWapi-box
+    </h1>
+  </div>
   <Nav
     favCount={0}
   />
