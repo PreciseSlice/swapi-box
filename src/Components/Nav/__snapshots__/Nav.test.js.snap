@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav Exist and matches snapshot 1`] = `
+<div
+  className="nav"
+>
+  <button>
+    <NavLink
+      activeClassName="active"
+      ariaCurrent="true"
+      to="/"
+    >
+      Opening Crawl
+    </NavLink>
+  </button>
+  <button>
+    <NavLink
+      activeClassName="active"
+      ariaCurrent="true"
+      to="/people"
+    >
+      People
+    </NavLink>
+  </button>
+  <button>
+    <NavLink
+      activeClassName="active"
+      ariaCurrent="true"
+      to="/planets"
+    >
+      Planets
+    </NavLink>
+  </button>
+  <button>
+    <NavLink
+      activeClassName="active"
+      ariaCurrent="true"
+      to="/vehicles"
+    >
+      Vehicles
+    </NavLink>
+  </button>
+  <button>
+    <NavLink
+      activeClassName="active"
+      ariaCurrent="true"
+      to="/favorites"
+    >
+      View Favorites 
+      4
+    </NavLink>
+  </button>
+</div>
+`;
