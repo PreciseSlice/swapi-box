@@ -79,7 +79,7 @@ exports[`People Exist and matches snapshot 1`] = `
         <button
           onClick={[Function]}
         >
-          Favorite
+          favorite
         </button>
       </div>
     </Card>
@@ -122,7 +122,7 @@ exports[`People Exist and matches snapshot 1`] = `
         <button
           onClick={[Function]}
         >
-          Favorite
+          favorite
         </button>
       </div>
     </Card>

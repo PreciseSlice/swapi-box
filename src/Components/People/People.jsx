@@ -45,7 +45,7 @@ People.propTypes = {
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       homeWolrd: PropTypes.string,
-      speciesName: PropTypes.string.isRequired,
+      speciesName: PropTypes.string,
       population: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
         .isRequired
     }).isRequired

@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Vehicles from './Vehicles';
-import { shallow, mount, render } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { cleanVehicles } from '../apiCalls/apiMockData';
 
 describe('Vehicles', () => {
