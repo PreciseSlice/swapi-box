@@ -14,7 +14,7 @@ const Card = ({ data, clickHandler, highlighted }) => {
       <h1>{data.name}</h1>
       <ul>{keyMap}</ul>
       <button onClick={() => clickHandler(data)}>
-        Favorite
+        favorite
       </button>
     </div>
   );
