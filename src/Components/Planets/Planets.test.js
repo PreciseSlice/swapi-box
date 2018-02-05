@@ -7,13 +7,17 @@ import { cleanPlanets } from '../apiCalls/apiMockData';
 
 describe('Planets', () => {
   let wrapper;
+  let mockFunction;
+  let secondMockFunction;
 
   beforeEach(() => {
+    mockFunction = jest.fn();
+    secondMockFunction = jest.fn();
     wrapper = mount(
       <Planets
-        setPlanets={jest.fn()}
+        setPlanets={mockFunction}
         planetData={cleanPlanets}
-        clickHandler={jest.fn()}
+        clickHandler={secondMockFunction}
         favorites={cleanPlanets}
       />
     );
@@ -24,7 +28,19 @@ describe('Planets', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it.skip('should get people data if it does not have it', () => {});
+  it('should get planet data if it does not have it, by calling getPlanets.', async () => {
+    wrapper = shallow(
+      <Planets
+        setPlanets={mockFunction}
+        planetData={[]}
+        clickHandler={secondMockFunction}
+        favorites={cleanPlanets}
+      />
+    );
+
+    await wrapper.instance().componentDidMount();
+    expect(mockFunction).toHaveBeenCalled();
+  });
 
   it('renders a card for each object in the array it is passed', () => {
     expect(wrapper.find('.card').length).toEqual(10);

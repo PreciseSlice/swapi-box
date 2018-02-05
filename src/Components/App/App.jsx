@@ -113,5 +113,3 @@ class App extends Component {
 }
 
 export default App;
-
-// Second image with closer perspective on the footer

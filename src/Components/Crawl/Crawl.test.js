@@ -6,8 +6,12 @@ import { shallow, mount } from 'enzyme';
 
 describe('Crawl', () => {
   let wrapper;
+  let mockFunction;
+  let secondMockFunction;
 
   beforeEach(() => {
+    mockFunction = jest.fn();
+    secondMockFunction = jest.fn();
     wrapper = shallow(
       <Crawl
         filmData={{
@@ -26,18 +30,24 @@ describe('Crawl', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  //how do test this out
-  it.skip('should get film data if it does not have it', () => {
-    const setFilms = jest.fn()
-    wrapper = shallow(<Crawl filmData={{}} setFilms={setFilms}/>)
+  it('should get film data if it does not have it, by calling getFilms.', async () => {
+    wrapper = shallow(
+      <Crawl
+        setFilms={mockFunction}
+        filmData={{}}
+        clickHandler={secondMockFunction}
+        favorites={{}}
+      />
+    );
+
+    await wrapper.instance().componentDidMount();
+    expect(mockFunction).toHaveBeenCalled();
   });
 
   it('should convert arabic numerals to roman numerals ', () => {
-    expect(wrapper.instance().romanize(1)).toEqual('I')
-    expect(wrapper.instance().romanize(4)).toEqual('IV')
-    expect(wrapper.instance().romanize(5)).toEqual('V')
-    expect(wrapper.instance().romanize(7)).toEqual('VII')
+    expect(wrapper.instance().romanize(1)).toEqual('I');
+    expect(wrapper.instance().romanize(4)).toEqual('IV');
+    expect(wrapper.instance().romanize(5)).toEqual('V');
+    expect(wrapper.instance().romanize(7)).toEqual('VII');
   });
-
-
 });
