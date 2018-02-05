@@ -11,21 +11,31 @@ export const callFetch = async url => {
 };
 
 export const getHomeworld = async url => {
-  const homeworld = await callFetch(url);
-
-  return {
-    homeworld: homeworld.name,
-    population: homeworld.population
-  };
+  try{
+    const homeworld = await callFetch(url);
+  
+    return {
+      homeworld: homeworld.name,
+      population: homeworld.population
+    };
+  } catch(er) {
+    const error = new Error('getHomeworld failed to fetch data');
+    return error;
+  }
 };
 
 export const getName = async url => {
-  const unresolvedPromises = url.map(async url => {
-    const eachName = await callFetch(url);
-
-    return eachName.name;
-  });
-  return Promise.all(unresolvedPromises);
+  try{
+    const unresolvedPromises = url.map(async url => {
+      const eachName = await callFetch(url);
+  
+      return eachName.name;
+    });
+    return Promise.all(unresolvedPromises);
+  } catch(er) {
+      const error = new Error('getName failed to fetch data');
+      return error;
+  }
 };
 
 export const getFilms = async url => {
