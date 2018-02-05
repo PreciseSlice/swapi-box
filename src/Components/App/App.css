@@ -6,3 +6,13 @@
   border: 2px solid #feda4a;
   height: 450px;
   margin: 40px 40px; }
+
+.header {
+  display: flex;
+  margin: 25px;
+  justify-content: center; }
+  .header h1 {
+    color: #feda4a;
+    font-size: 5em; }
+  .header button {
+    margin-left: 20px; }
