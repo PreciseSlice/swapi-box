@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 class People extends Component {
   async componentDidMount() {
     const { setPeople, peopleData } = this.props;
-    if (peopleData.length < 1) {
+    if (!peopleData.length) {
       const peopleData = await getPeople('https://swapi.co/api/people/');
       setPeople(peopleData);
     }
