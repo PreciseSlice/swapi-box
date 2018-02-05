@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 class Planets extends Component {
   async componentDidMount() {
     const { setPlanets, planetData } = this.props;
-    if (planetData.length < 1) {
+    if (!planetData.length) {
       const planetData = await getPlanets('https://swapi.co/api/planets/');
       setPlanets(planetData);
     }

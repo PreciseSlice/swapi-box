@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 class Vehicles extends Component {
   async componentDidMount() {
     const { setVehicles, vehicleData } = this.props;
-    if (vehicleData.length < 1) {
+    if (!vehicleData.length) {
       const vehicleData = await getVehicles('https://swapi.co/api/vehicles/');
       setVehicles(vehicleData);
     }
