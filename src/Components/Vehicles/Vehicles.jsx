@@ -45,8 +45,11 @@ Vehicles.propTypes = {
     PropTypes.shape({
       name: PropTypes.string.isRequired,
       model: PropTypes.string.isRequired,
-      vehicleClass: PropTypes.string.isRequired
-      //passengers: PropTypes.number.isRequired
+      vehicleClass: PropTypes.string.isRequired,
+      passengers: PropTypes.oneOfType([
+        PropTypes.number,
+        PropTypes.string
+      ])
     }).isRequired
   ).isRequired
 };

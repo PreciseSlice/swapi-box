@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import People from './People';
 import { shallow, mount, render } from 'enzyme';
-import { peopleData, allPeople } from '../apiCalls/apiMockData';
+import { peopleData } from '../apiCalls/apiMockData';
 
 describe('People', () => {
   let wrapper;
@@ -24,7 +24,7 @@ describe('People', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it.only('should get people data if it does not have it', () => {
+  it.skip('should get people data if it does not have it', () => {
 
   });
 

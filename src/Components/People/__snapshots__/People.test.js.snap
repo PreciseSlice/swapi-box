@@ -1,34 +1,131 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`People Exist and matches snapshot 1`] = `
-<div
-  className="peopleContainer"
->
-  <Card
-    clickHandler={[Function]}
-    data={
+<People
+  clickHandler={[Function]}
+  favorites={
+    Array [
       Object {
         "homeworld": "planet",
         "name": "Luke Skywalker",
         "population": 100,
         "speciesName": "human",
-      }
-    }
-    highlighted="highlighted"
-    key="Luke Skywalker"
-  />
-  <Card
-    clickHandler={[Function]}
-    data={
+      },
       Object {
         "homeworld": "planet",
         "name": "C-3PO",
         "population": 12,
         "speciesName": "droid",
+      },
+    ]
+  }
+  peopleData={
+    Array [
+      Object {
+        "homeworld": "planet",
+        "name": "Luke Skywalker",
+        "population": 100,
+        "speciesName": "human",
+      },
+      Object {
+        "homeworld": "planet",
+        "name": "C-3PO",
+        "population": 12,
+        "speciesName": "droid",
+      },
+    ]
+  }
+  setPeople={[Function]}
+>
+  <div
+    className="peopleContainer"
+  >
+    <Card
+      clickHandler={[Function]}
+      data={
+        Object {
+          "homeworld": "planet",
+          "name": "Luke Skywalker",
+          "population": 100,
+          "speciesName": "human",
+        }
       }
-    }
-    highlighted="highlighted"
-    key="C-3PO"
-  />
-</div>
+      highlighted="highlighted"
+      key="Luke Skywalker"
+    >
+      <div
+        className="card highlighted"
+      >
+        <h1>
+          Luke Skywalker
+        </h1>
+        <ul>
+          <li
+            key="function now() { [native code] }0"
+          >
+            homeworld: planet
+          </li>
+          <li
+            key="function now() { [native code] }1"
+          >
+            population: 100
+          </li>
+          <li
+            key="function now() { [native code] }2"
+          >
+            speciesName: human
+          </li>
+        </ul>
+        <button
+          onClick={[Function]}
+        >
+          Favorite
+        </button>
+      </div>
+    </Card>
+    <Card
+      clickHandler={[Function]}
+      data={
+        Object {
+          "homeworld": "planet",
+          "name": "C-3PO",
+          "population": 12,
+          "speciesName": "droid",
+        }
+      }
+      highlighted="highlighted"
+      key="C-3PO"
+    >
+      <div
+        className="card highlighted"
+      >
+        <h1>
+          C-3PO
+        </h1>
+        <ul>
+          <li
+            key="function now() { [native code] }0"
+          >
+            homeworld: planet
+          </li>
+          <li
+            key="function now() { [native code] }1"
+          >
+            population: 12
+          </li>
+          <li
+            key="function now() { [native code] }2"
+          >
+            speciesName: droid
+          </li>
+        </ul>
+        <button
+          onClick={[Function]}
+        >
+          Favorite
+        </button>
+      </div>
+    </Card>
+  </div>
+</People>
 `;

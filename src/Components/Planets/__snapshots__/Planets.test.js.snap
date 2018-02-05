@@ -1,0 +1,651 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Planets Exist and matches snapshot 1`] = `
+<Planets
+  clickHandler={[Function]}
+  favorites={
+    Array [
+      Object {
+        "climate": "temperate",
+        "name": "Alderaan",
+        "population": "2000000000",
+        "residents": ", , ",
+        "terrain": "grasslands, mountains",
+      },
+      Object {
+        "climate": "temperate, tropical",
+        "name": "Yavin IV",
+        "population": "1000",
+        "residents": "",
+        "terrain": "jungle, rainforests",
+      },
+      Object {
+        "climate": "frozen",
+        "name": "Hoth",
+        "population": "unknown",
+        "residents": "",
+        "terrain": "tundra, ice caves, mountain ranges",
+      },
+      Object {
+        "climate": "murky",
+        "name": "Dagobah",
+        "population": "unknown",
+        "residents": "",
+        "terrain": "swamp, jungles",
+      },
+      Object {
+        "climate": "temperate",
+        "name": "Bespin",
+        "population": "6000000",
+        "residents": "",
+        "terrain": "gas giant",
+      },
+      Object {
+        "climate": "temperate",
+        "name": "Endor",
+        "population": "30000000",
+        "residents": "",
+        "terrain": "forests, mountains, lakes",
+      },
+      Object {
+        "climate": "temperate",
+        "name": "Naboo",
+        "population": "4500000000",
+        "residents": ", , , , , , , , , , ",
+        "terrain": "grassy hills, swamps, forests, mountains",
+      },
+      Object {
+        "climate": "temperate",
+        "name": "Coruscant",
+        "population": "1000000000000",
+        "residents": ", , ",
+        "terrain": "cityscape, mountains",
+      },
+      Object {
+        "climate": "temperate",
+        "name": "Kamino",
+        "population": "1000000000",
+        "residents": ", , ",
+        "terrain": "ocean",
+      },
+      Object {
+        "climate": "temperate, arid",
+        "name": "Geonosis",
+        "population": "100000000000",
+        "residents": "",
+        "terrain": "rock, desert, mountain, barren",
+      },
+    ]
+  }
+  planetData={
+    Array [
+      Object {
+        "climate": "temperate",
+        "name": "Alderaan",
+        "population": "2000000000",
+        "residents": ", , ",
+        "terrain": "grasslands, mountains",
+      },
+      Object {
+        "climate": "temperate, tropical",
+        "name": "Yavin IV",
+        "population": "1000",
+        "residents": "",
+        "terrain": "jungle, rainforests",
+      },
+      Object {
+        "climate": "frozen",
+        "name": "Hoth",
+        "population": "unknown",
+        "residents": "",
+        "terrain": "tundra, ice caves, mountain ranges",
+      },
+      Object {
+        "climate": "murky",
+        "name": "Dagobah",
+        "population": "unknown",
+        "residents": "",
+        "terrain": "swamp, jungles",
+      },
+      Object {
+        "climate": "temperate",
+        "name": "Bespin",
+        "population": "6000000",
+        "residents": "",
+        "terrain": "gas giant",
+      },
+      Object {
+        "climate": "temperate",
+        "name": "Endor",
+        "population": "30000000",
+        "residents": "",
+        "terrain": "forests, mountains, lakes",
+      },
+      Object {
+        "climate": "temperate",
+        "name": "Naboo",
+        "population": "4500000000",
+        "residents": ", , , , , , , , , , ",
+        "terrain": "grassy hills, swamps, forests, mountains",
+      },
+      Object {
+        "climate": "temperate",
+        "name": "Coruscant",
+        "population": "1000000000000",
+        "residents": ", , ",
+        "terrain": "cityscape, mountains",
+      },
+      Object {
+        "climate": "temperate",
+        "name": "Kamino",
+        "population": "1000000000",
+        "residents": ", , ",
+        "terrain": "ocean",
+      },
+      Object {
+        "climate": "temperate, arid",
+        "name": "Geonosis",
+        "population": "100000000000",
+        "residents": "",
+        "terrain": "rock, desert, mountain, barren",
+      },
+    ]
+  }
+  setPlanets={[Function]}
+>
+  <div
+    className="planet-container"
+  >
+    <Card
+      clickHandler={[Function]}
+      data={
+        Object {
+          "climate": "temperate",
+          "name": "Alderaan",
+          "population": "2000000000",
+          "residents": ", , ",
+          "terrain": "grasslands, mountains",
+        }
+      }
+      highlighted="highlighted"
+      key="Alderaan"
+    >
+      <div
+        className="card highlighted"
+      >
+        <h1>
+          Alderaan
+        </h1>
+        <ul>
+          <li
+            key="function now() { [native code] }0"
+          >
+            climate: temperate
+          </li>
+          <li
+            key="function now() { [native code] }1"
+          >
+            population: 2000000000
+          </li>
+          <li
+            key="function now() { [native code] }2"
+          >
+            residents: , , 
+          </li>
+          <li
+            key="function now() { [native code] }3"
+          >
+            terrain: grasslands, mountains
+          </li>
+        </ul>
+        <button
+          onClick={[Function]}
+        >
+          Favorite
+        </button>
+      </div>
+    </Card>
+    <Card
+      clickHandler={[Function]}
+      data={
+        Object {
+          "climate": "temperate, tropical",
+          "name": "Yavin IV",
+          "population": "1000",
+          "residents": "",
+          "terrain": "jungle, rainforests",
+        }
+      }
+      highlighted="highlighted"
+      key="Yavin IV"
+    >
+      <div
+        className="card highlighted"
+      >
+        <h1>
+          Yavin IV
+        </h1>
+        <ul>
+          <li
+            key="function now() { [native code] }0"
+          >
+            climate: temperate, tropical
+          </li>
+          <li
+            key="function now() { [native code] }1"
+          >
+            population: 1000
+          </li>
+          <li
+            key="function now() { [native code] }2"
+          >
+            residents: 
+          </li>
+          <li
+            key="function now() { [native code] }3"
+          >
+            terrain: jungle, rainforests
+          </li>
+        </ul>
+        <button
+          onClick={[Function]}
+        >
+          Favorite
+        </button>
+      </div>
+    </Card>
+    <Card
+      clickHandler={[Function]}
+      data={
+        Object {
+          "climate": "frozen",
+          "name": "Hoth",
+          "population": "unknown",
+          "residents": "",
+          "terrain": "tundra, ice caves, mountain ranges",
+        }
+      }
+      highlighted="highlighted"
+      key="Hoth"
+    >
+      <div
+        className="card highlighted"
+      >
+        <h1>
+          Hoth
+        </h1>
+        <ul>
+          <li
+            key="function now() { [native code] }0"
+          >
+            climate: frozen
+          </li>
+          <li
+            key="function now() { [native code] }1"
+          >
+            population: unknown
+          </li>
+          <li
+            key="function now() { [native code] }2"
+          >
+            residents: 
+          </li>
+          <li
+            key="function now() { [native code] }3"
+          >
+            terrain: tundra, ice caves, mountain ranges
+          </li>
+        </ul>
+        <button
+          onClick={[Function]}
+        >
+          Favorite
+        </button>
+      </div>
+    </Card>
+    <Card
+      clickHandler={[Function]}
+      data={
+        Object {
+          "climate": "murky",
+          "name": "Dagobah",
+          "population": "unknown",
+          "residents": "",
+          "terrain": "swamp, jungles",
+        }
+      }
+      highlighted="highlighted"
+      key="Dagobah"
+    >
+      <div
+        className="card highlighted"
+      >
+        <h1>
+          Dagobah
+        </h1>
+        <ul>
+          <li
+            key="function now() { [native code] }0"
+          >
+            climate: murky
+          </li>
+          <li
+            key="function now() { [native code] }1"
+          >
+            population: unknown
+          </li>
+          <li
+            key="function now() { [native code] }2"
+          >
+            residents: 
+          </li>
+          <li
+            key="function now() { [native code] }3"
+          >
+            terrain: swamp, jungles
+          </li>
+        </ul>
+        <button
+          onClick={[Function]}
+        >
+          Favorite
+        </button>
+      </div>
+    </Card>
+    <Card
+      clickHandler={[Function]}
+      data={
+        Object {
+          "climate": "temperate",
+          "name": "Bespin",
+          "population": "6000000",
+          "residents": "",
+          "terrain": "gas giant",
+        }
+      }
+      highlighted="highlighted"
+      key="Bespin"
+    >
+      <div
+        className="card highlighted"
+      >
+        <h1>
+          Bespin
+        </h1>
+        <ul>
+          <li
+            key="function now() { [native code] }0"
+          >
+            climate: temperate
+          </li>
+          <li
+            key="function now() { [native code] }1"
+          >
+            population: 6000000
+          </li>
+          <li
+            key="function now() { [native code] }2"
+          >
+            residents: 
+          </li>
+          <li
+            key="function now() { [native code] }3"
+          >
+            terrain: gas giant
+          </li>
+        </ul>
+        <button
+          onClick={[Function]}
+        >
+          Favorite
+        </button>
+      </div>
+    </Card>
+    <Card
+      clickHandler={[Function]}
+      data={
+        Object {
+          "climate": "temperate",
+          "name": "Endor",
+          "population": "30000000",
+          "residents": "",
+          "terrain": "forests, mountains, lakes",
+        }
+      }
+      highlighted="highlighted"
+      key="Endor"
+    >
+      <div
+        className="card highlighted"
+      >
+        <h1>
+          Endor
+        </h1>
+        <ul>
+          <li
+            key="function now() { [native code] }0"
+          >
+            climate: temperate
+          </li>
+          <li
+            key="function now() { [native code] }1"
+          >
+            population: 30000000
+          </li>
+          <li
+            key="function now() { [native code] }2"
+          >
+            residents: 
+          </li>
+          <li
+            key="function now() { [native code] }3"
+          >
+            terrain: forests, mountains, lakes
+          </li>
+        </ul>
+        <button
+          onClick={[Function]}
+        >
+          Favorite
+        </button>
+      </div>
+    </Card>
+    <Card
+      clickHandler={[Function]}
+      data={
+        Object {
+          "climate": "temperate",
+          "name": "Naboo",
+          "population": "4500000000",
+          "residents": ", , , , , , , , , , ",
+          "terrain": "grassy hills, swamps, forests, mountains",
+        }
+      }
+      highlighted="highlighted"
+      key="Naboo"
+    >
+      <div
+        className="card highlighted"
+      >
+        <h1>
+          Naboo
+        </h1>
+        <ul>
+          <li
+            key="function now() { [native code] }0"
+          >
+            climate: temperate
+          </li>
+          <li
+            key="function now() { [native code] }1"
+          >
+            population: 4500000000
+          </li>
+          <li
+            key="function now() { [native code] }2"
+          >
+            residents: , , , , , , , , , , 
+          </li>
+          <li
+            key="function now() { [native code] }3"
+          >
+            terrain: grassy hills, swamps, forests, mountains
+          </li>
+        </ul>
+        <button
+          onClick={[Function]}
+        >
+          Favorite
+        </button>
+      </div>
+    </Card>
+    <Card
+      clickHandler={[Function]}
+      data={
+        Object {
+          "climate": "temperate",
+          "name": "Coruscant",
+          "population": "1000000000000",
+          "residents": ", , ",
+          "terrain": "cityscape, mountains",
+        }
+      }
+      highlighted="highlighted"
+      key="Coruscant"
+    >
+      <div
+        className="card highlighted"
+      >
+        <h1>
+          Coruscant
+        </h1>
+        <ul>
+          <li
+            key="function now() { [native code] }0"
+          >
+            climate: temperate
+          </li>
+          <li
+            key="function now() { [native code] }1"
+          >
+            population: 1000000000000
+          </li>
+          <li
+            key="function now() { [native code] }2"
+          >
+            residents: , , 
+          </li>
+          <li
+            key="function now() { [native code] }3"
+          >
+            terrain: cityscape, mountains
+          </li>
+        </ul>
+        <button
+          onClick={[Function]}
+        >
+          Favorite
+        </button>
+      </div>
+    </Card>
+    <Card
+      clickHandler={[Function]}
+      data={
+        Object {
+          "climate": "temperate",
+          "name": "Kamino",
+          "population": "1000000000",
+          "residents": ", , ",
+          "terrain": "ocean",
+        }
+      }
+      highlighted="highlighted"
+      key="Kamino"
+    >
+      <div
+        className="card highlighted"
+      >
+        <h1>
+          Kamino
+        </h1>
+        <ul>
+          <li
+            key="function now() { [native code] }0"
+          >
+            climate: temperate
+          </li>
+          <li
+            key="function now() { [native code] }1"
+          >
+            population: 1000000000
+          </li>
+          <li
+            key="function now() { [native code] }2"
+          >
+            residents: , , 
+          </li>
+          <li
+            key="function now() { [native code] }3"
+          >
+            terrain: ocean
+          </li>
+        </ul>
+        <button
+          onClick={[Function]}
+        >
+          Favorite
+        </button>
+      </div>
+    </Card>
+    <Card
+      clickHandler={[Function]}
+      data={
+        Object {
+          "climate": "temperate, arid",
+          "name": "Geonosis",
+          "population": "100000000000",
+          "residents": "",
+          "terrain": "rock, desert, mountain, barren",
+        }
+      }
+      highlighted="highlighted"
+      key="Geonosis"
+    >
+      <div
+        className="card highlighted"
+      >
+        <h1>
+          Geonosis
+        </h1>
+        <ul>
+          <li
+            key="function now() { [native code] }0"
+          >
+            climate: temperate, arid
+          </li>
+          <li
+            key="function now() { [native code] }1"
+          >
+            population: 100000000000
+          </li>
+          <li
+            key="function now() { [native code] }2"
+          >
+            residents: 
+          </li>
+          <li
+            key="function now() { [native code] }3"
+          >
+            terrain: rock, desert, mountain, barren
+          </li>
+        </ul>
+        <button
+          onClick={[Function]}
+        >
+          Favorite
+        </button>
+      </div>
+    </Card>
+  </div>
+</Planets>
+`;
