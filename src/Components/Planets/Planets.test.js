@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Planets from './Planets';
-import { shallow, mount, render } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import { cleanPlanets } from '../apiCalls/apiMockData';
 
 describe('Planets', () => {

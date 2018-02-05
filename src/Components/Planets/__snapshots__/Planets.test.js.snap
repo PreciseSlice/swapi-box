@@ -201,7 +201,7 @@ exports[`Planets Exist and matches snapshot 1`] = `
         <button
           onClick={[Function]}
         >
-          Favorite
+          favorite
         </button>
       </div>
     </Card>
@@ -250,7 +250,7 @@ exports[`Planets Exist and matches snapshot 1`] = `
         <button
           onClick={[Function]}
         >
-          Favorite
+          favorite
         </button>
       </div>
     </Card>
@@ -299,7 +299,7 @@ exports[`Planets Exist and matches snapshot 1`] = `
         <button
           onClick={[Function]}
         >
-          Favorite
+          favorite
         </button>
       </div>
     </Card>
@@ -348,7 +348,7 @@ exports[`Planets Exist and matches snapshot 1`] = `
         <button
           onClick={[Function]}
         >
-          Favorite
+          favorite
         </button>
       </div>
     </Card>
@@ -397,7 +397,7 @@ exports[`Planets Exist and matches snapshot 1`] = `
         <button
           onClick={[Function]}
         >
-          Favorite
+          favorite
         </button>
       </div>
     </Card>
@@ -446,7 +446,7 @@ exports[`Planets Exist and matches snapshot 1`] = `
         <button
           onClick={[Function]}
         >
-          Favorite
+          favorite
         </button>
       </div>
     </Card>
@@ -495,7 +495,7 @@ exports[`Planets Exist and matches snapshot 1`] = `
         <button
           onClick={[Function]}
         >
-          Favorite
+          favorite
         </button>
       </div>
     </Card>
@@ -544,7 +544,7 @@ exports[`Planets Exist and matches snapshot 1`] = `
         <button
           onClick={[Function]}
         >
-          Favorite
+          favorite
         </button>
       </div>
     </Card>
@@ -593,7 +593,7 @@ exports[`Planets Exist and matches snapshot 1`] = `
         <button
           onClick={[Function]}
         >
-          Favorite
+          favorite
         </button>
       </div>
     </Card>
@@ -642,7 +642,7 @@ exports[`Planets Exist and matches snapshot 1`] = `
         <button
           onClick={[Function]}
         >
-          Favorite
+          favorite
         </button>
       </div>
     </Card>
