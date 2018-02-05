@@ -7,7 +7,16 @@ const Favorites = ({ favorites, clickHandler }) => {
   const renderCards = favorites.map(favorite => (
     <Card data={favorite} key={favorite.name} clickHandler={clickHandler} />
   ));
-  return <div className="favoriteContainer">{renderCards}</div>;
+
+  if (favorites.length > 0) {
+    return <div className="favoriteContainer">{renderCards}</div>;
+  } else {
+    return (
+      <div className="noFavorites">
+        <h1>No Favorites Selected!</h1>
+      </div>
+    );
+  }
 };
 
 Favorites.propTypes = {
