@@ -7,7 +7,7 @@ const Nav = ({ favCount }) => {
   return (
     <div className="nav">
       <button>
-        <NavLink to="/">home</NavLink>
+        <NavLink to="/">scroll</NavLink>
       </button>
       <button>
         <NavLink to="/people">people</NavLink>
