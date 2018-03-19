@@ -12,12 +12,14 @@
     font-size: 1.2em;
     margin-top: 10px; }
   .card button {
-    background-color: lightgray;
+    background-color: #4b074b;
+    border: none;
+    color: #feda4a;
     font-family: 'Oswald', sans-serif;
-    font-size: 1.2em;
-    height: 35px;
+    font-size: 1.6em;
+    height: 60px;
     letter-spacing: 0.15em;
-    margin-top: 30px;
+    margin: 20px;
     outline: none;
     width: 43%; }
     .card button:active {
@@ -28,4 +30,5 @@
     font-weight: 600; }
 
 .highlighted button {
-  background-color: #feda4a; }
+  background-color: #feda4a;
+  color: #4b074b; }
