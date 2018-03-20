@@ -10,12 +10,10 @@ const Card = ({ data, clickHandler, highlighted }) => {
   });
 
   return (
-    <div className={"card " + highlighted} >
+    <div className={'card ' + highlighted}>
       <h1>{data.name}</h1>
       <ul>{keyMap}</ul>
-      <button onClick={() => clickHandler(data)}>
-        favorite
-      </button>
+      <button onClick={() => clickHandler(data)}>favorite</button>
     </div>
   );
 };
