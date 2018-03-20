@@ -8,9 +8,10 @@
   margin-top: 30px;
   justify-content: center;
   width: 30%; }
-  .card li {
-    font-size: 1.2em;
-    margin-top: 10px; }
+  .card ul {
+    margin: 30px;
+    line-height: 2;
+    font-size: 1.2em; }
   .card button {
     background-color: #4b074b;
     border: none;
