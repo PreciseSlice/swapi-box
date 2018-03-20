@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './People.css';
-import { getPeople } from '../apiCalls/apiCaller';
+import { getPeople } from '../../apiCalls/apiCaller';
 import Card from '../Card/Card.jsx';
 import PropTypes from 'prop-types';
 

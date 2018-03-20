@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Planets.css';
-import { getPlanets } from '../apiCalls/apiCaller';
+import { getPlanets } from '../../apiCalls/apiCaller';
 import Card from '../Card/Card.jsx';
 import PropTypes from 'prop-types';
 
