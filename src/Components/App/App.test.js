@@ -8,7 +8,7 @@ import {
   cleanPeople,
   cleanPlanets,
   cleanVehicles
-} from '../apiCalls/apiMockData';
+} from '../../apiCalls/apiMockData';
 
 describe('App', () => {
   let wrapper;
