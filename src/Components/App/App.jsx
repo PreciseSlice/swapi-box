@@ -30,14 +30,14 @@ class App extends Component {
 
   clickHandler = cardProps => {
     const { favorites } = this.state;
+    let newFavorites;
 
     if (!favorites.includes(cardProps)) {
-      const newFavorites = [...favorites, cardProps];
-      this.setState({ favorites: newFavorites });
+      newFavorites = [...favorites, cardProps];
     } else {
-      const newFavorites = [...favorites.filter(card => card !== cardProps)];
-      this.setState({ favorites: newFavorites });
+      newFavorites = [...favorites.filter(card => card !== cardProps)];
     }
+    this.setState({ favorites: newFavorites });
   };
 
   render() {
@@ -48,6 +48,8 @@ class App extends Component {
       planetData,
       vehicleData
     } = this.state;
+
+    const { clickHandler, setFilms, setPeople, setPlanets, setVehicles } = this;
 
     return (
       <div className="app">
@@ -60,18 +62,16 @@ class App extends Component {
             <Route
               exact
               path="/"
-              render={() => (
-                <Crawl setFilms={this.setFilms} filmData={filmData} />
-              )}
+              render={() => <Crawl setFilms={setFilms} filmData={filmData} />}
             />
 
             <Route
               path="/people"
               render={() => (
                 <People
-                  setPeople={this.setPeople}
+                  setPeople={setPeople}
                   peopleData={peopleData}
-                  clickHandler={this.clickHandler}
+                  clickHandler={clickHandler}
                   favorites={favorites}
                 />
               )}
@@ -81,9 +81,9 @@ class App extends Component {
               path="/planets"
               render={() => (
                 <Planets
-                  setPlanets={this.setPlanets}
+                  setPlanets={setPlanets}
                   planetData={planetData}
-                  clickHandler={this.clickHandler}
+                  clickHandler={clickHandler}
                   favorites={favorites}
                 />
               )}
@@ -93,9 +93,9 @@ class App extends Component {
               path="/vehicles"
               render={() => (
                 <Vehicles
-                  setVehicles={this.setVehicles}
+                  setVehicles={setVehicles}
                   vehicleData={vehicleData}
-                  clickHandler={this.clickHandler}
+                  clickHandler={clickHandler}
                   favorites={favorites}
                 />
               )}
@@ -104,10 +104,7 @@ class App extends Component {
             <Route
               path="/favorites"
               render={() => (
-                <Favorites
-                  favorites={favorites}
-                  clickHandler={this.clickHandler}
-                />
+                <Favorites favorites={favorites} clickHandler={clickHandler} />
               )}
             />
           </Switch>
