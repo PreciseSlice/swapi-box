@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Vehicles from './Vehicles';
 import { shallow, mount } from 'enzyme';
-import { cleanVehicles } from '../apiCalls/apiMockData';
+import { cleanVehicles } from '../../apiCalls/apiMockData';
 
 describe('Vehicles', () => {
   let wrapper;
