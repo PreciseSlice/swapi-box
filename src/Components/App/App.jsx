@@ -29,35 +29,39 @@ class App extends Component {
   setVehicles = vehicleData => this.setState({ vehicleData });
 
   clickHandler = cardProps => {
-    if (!this.state.favorites.includes(cardProps)) {
-      const favorites = [...this.state.favorites, cardProps];
-      this.setState({ favorites });
+    const { favorites } = this.state;
+
+    if (!favorites.includes(cardProps)) {
+      const newFavorites = [...favorites, cardProps];
+      this.setState({ favorites: newFavorites });
     } else {
-      const favorites = [
-        ...this.state.favorites.filter(card => card !== cardProps)
-      ];
-      this.setState({ favorites });
+      const newFavorites = [...favorites.filter(card => card !== cardProps)];
+      this.setState({ favorites: newFavorites });
     }
   };
 
   render() {
+    const {
+      favorites,
+      filmData,
+      peopleData,
+      planetData,
+      vehicleData
+    } = this.state;
+
     return (
       <div className="app">
         <div className="header">
           <h1>swapi-box</h1>
         </div>
-        <Nav favCount={this.state.favorites.length} />
+        <Nav favCount={favorites.length} />
         <div className="main">
           <Switch>
-
             <Route
               exact
               path="/"
               render={() => (
-                <Crawl
-                  setFilms={this.setFilms}
-                  filmData={this.state.filmData}
-                />
+                <Crawl setFilms={this.setFilms} filmData={filmData} />
               )}
             />
 
@@ -66,9 +70,9 @@ class App extends Component {
               render={() => (
                 <People
                   setPeople={this.setPeople}
-                  peopleData={this.state.peopleData}
+                  peopleData={peopleData}
                   clickHandler={this.clickHandler}
-                  favorites={this.state.favorites}
+                  favorites={favorites}
                 />
               )}
             />
@@ -78,9 +82,9 @@ class App extends Component {
               render={() => (
                 <Planets
                   setPlanets={this.setPlanets}
-                  planetData={this.state.planetData}
+                  planetData={planetData}
                   clickHandler={this.clickHandler}
-                  favorites={this.state.favorites}
+                  favorites={favorites}
                 />
               )}
             />
@@ -90,9 +94,9 @@ class App extends Component {
               render={() => (
                 <Vehicles
                   setVehicles={this.setVehicles}
-                  vehicleData={this.state.vehicleData}
+                  vehicleData={vehicleData}
                   clickHandler={this.clickHandler}
-                  favorites={this.state.favorites}
+                  favorites={favorites}
                 />
               )}
             />
@@ -101,12 +105,11 @@ class App extends Component {
               path="/favorites"
               render={() => (
                 <Favorites
-                  favorites={this.state.favorites}
+                  favorites={favorites}
                   clickHandler={this.clickHandler}
                 />
               )}
             />
-            
           </Switch>
         </div>
       </div>
