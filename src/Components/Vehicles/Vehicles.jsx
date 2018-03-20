@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Vehicles.css';
-import { getVehicles } from '../apiCalls/apiCaller';
+import { getVehicles } from '../../apiCalls/apiCaller';
 import Card from '../Card/Card.jsx';
 import PropTypes from 'prop-types';
 

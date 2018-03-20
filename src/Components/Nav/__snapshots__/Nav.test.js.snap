@@ -10,7 +10,7 @@ exports[`Nav Exist and matches snapshot 1`] = `
       ariaCurrent="true"
       to="/"
     >
-      home
+      opening crawl
     </NavLink>
   </button>
   <button>

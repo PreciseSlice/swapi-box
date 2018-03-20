@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import People from './People';
 import { shallow, mount } from 'enzyme';
-import { peopleData } from '../apiCalls/apiMockData';
+import { peopleData } from '../../apiCalls/apiMockData';
 
 describe('People', () => {
   let wrapper;
