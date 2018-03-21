@@ -47,3 +47,9 @@
   100% {
     top: -6000px;
     transform: rotateX(25deg) translateZ(-2500px); } }
+
+@media (max-width: 1100px) {
+  .crawl {
+    animation: crawl 60s linear; }
+  p {
+    font-size: .75em; } }
