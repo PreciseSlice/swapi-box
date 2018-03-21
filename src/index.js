@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom'
 import './index.css';
 import App from './Components/App/App.jsx';
-import registerServiceWorker from './registerServiceWorker';
 
 const router = (
   <BrowserRouter>
@@ -12,5 +11,3 @@ const router = (
 )
 
 ReactDOM.render(router, document.getElementById('root'));
-
-registerServiceWorker();
