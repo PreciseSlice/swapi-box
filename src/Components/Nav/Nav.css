@@ -1,12 +1,12 @@
 .nav {
   display: flex;
-  align-content: space-between;
-  justify-content: center;
-  margin: 30px; }
+  margin: 30px 0;
+  width: 100%; }
   .nav button {
     background-color: #4b074b;
     border: none;
     box-shadow: 0 0 5px 3px rgba(0, 59, 168, 0.8);
+    color: #feda4a;
     font-family: 'Oswald', sans-serif;
     font-size: 1.6em;
     height: 60px;
@@ -15,12 +15,19 @@
     width: 14%;
     outline: none; }
     .nav button:hover {
-      background-color: #feda4a; }
+      background-color: #feda4a;
+      color: #4b074b; }
       .nav button:hover a {
         color: #4b074b; }
   .nav a {
     color: #feda4a;
     text-decoration: none; }
+
+.nav-btns {
+  align-content: space-between;
+  display: flex;
+  justify-content: center;
+  width: 100%; }
 
 @media (max-width: 1200px) {
   .nav button {
@@ -37,14 +44,17 @@
 @media (max-width: 975px) {
   .nav button {
     margin: 15px;
-    width: 12%; }
+    width: 15%; }
   .nav a {
     line-height: 1.5; } }
 
-@media (max-width: 900px) {
+@media (max-width: 940px) {
   .nav {
     align-items: center;
     flex-direction: column; }
     .nav button {
-      font-size: 1.4em;
-      width: 66%; } }
+      font-size: 1em;
+      width: 66%; }
+  .nav-btns {
+    align-items: center;
+    flex-direction: column; } }
