@@ -41,7 +41,6 @@ exports[`People Exist and matches snapshot 1`] = `
     className="peopleContainer"
   >
     <Card
-      favClickHandler={[Function]}
       data={
         Object {
           "homeworld": "planet",
@@ -50,6 +49,7 @@ exports[`People Exist and matches snapshot 1`] = `
           "speciesName": "human",
         }
       }
+      favClickHandler={[Function]}
       highlighted="highlighted"
       key="Luke Skywalker"
     >
@@ -84,7 +84,6 @@ exports[`People Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      favClickHandler={[Function]}
       data={
         Object {
           "homeworld": "planet",
@@ -93,6 +92,7 @@ exports[`People Exist and matches snapshot 1`] = `
           "speciesName": "droid",
         }
       }
+      favClickHandler={[Function]}
       highlighted="highlighted"
       key="C-3PO"
     >

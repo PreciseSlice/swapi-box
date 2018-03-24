@@ -3,52 +3,5 @@
 exports[`Nav Exist and matches snapshot 1`] = `
 <div
   className="nav"
->
-  <button>
-    <NavLink
-      activeClassName="active"
-      ariaCurrent="true"
-      to="/"
-    >
-      opening crawl
-    </NavLink>
-  </button>
-  <button>
-    <NavLink
-      activeClassName="active"
-      ariaCurrent="true"
-      to="/people"
-    >
-      people
-    </NavLink>
-  </button>
-  <button>
-    <NavLink
-      activeClassName="active"
-      ariaCurrent="true"
-      to="/planets"
-    >
-      planets
-    </NavLink>
-  </button>
-  <button>
-    <NavLink
-      activeClassName="active"
-      ariaCurrent="true"
-      to="/vehicles"
-    >
-      vehicles
-    </NavLink>
-  </button>
-  <button>
-    <NavLink
-      activeClassName="active"
-      ariaCurrent="true"
-      to="/favorites"
-    >
-      favorites 
-      4
-    </NavLink>
-  </button>
-</div>
+/>
 `;
