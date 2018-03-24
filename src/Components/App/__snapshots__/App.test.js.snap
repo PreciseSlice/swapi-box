@@ -13,6 +13,10 @@ exports[`App Exist and matches snapshot 1`] = `
   </div>
   <Nav
     favCount={0}
+    mobile={false}
+    navArrow={[Function]}
+    navClickHandler={[Function]}
+    navVisable={true}
   />
   <div
     className="main"

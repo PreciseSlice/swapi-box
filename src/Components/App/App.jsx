@@ -49,10 +49,10 @@ class App extends Component {
 
   navArrow = () => {
     const { navVisable } = this.state;
-    const arrow = navVisable ? '▼' : '◀'
-    
-    return arrow
-  }
+    const arrow = navVisable ? '▼' : '◀';
+
+    return arrow;
+  };
 
   updateResponsive() {
     if (window.innerWidth < 940) {
@@ -66,11 +66,10 @@ class App extends Component {
 
   componentDidMount() {
     this.updateResponsive();
-    window.addEventListener("resize", () => this.updateResponsive());
+    window.addEventListener('resize', () => this.updateResponsive());
   }
-  
-  render() {
 
+  render() {
     const {
       favorites,
       filmData,

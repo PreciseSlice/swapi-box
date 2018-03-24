@@ -5,7 +5,11 @@ import PropTypes from 'prop-types';
 
 const Favorites = ({ favorites, favClickHandler }) => {
   const renderCards = favorites.map(favorite => (
-    <Card data={favorite} key={favorite.name} favClickHandler={favClickHandler} />
+    <Card
+      data={favorite}
+      key={favorite.name}
+      favClickHandler={favClickHandler}
+    />
   ));
 
   if (favorites.length > 0) {

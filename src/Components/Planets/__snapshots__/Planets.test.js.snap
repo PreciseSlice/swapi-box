@@ -157,7 +157,6 @@ exports[`Planets Exist and matches snapshot 1`] = `
     className="planet-container"
   >
     <Card
-      favClickHandler={[Function]}
       data={
         Object {
           "climate": "temperate",
@@ -167,6 +166,7 @@ exports[`Planets Exist and matches snapshot 1`] = `
           "terrain": "grasslands, mountains",
         }
       }
+      favClickHandler={[Function]}
       highlighted="highlighted"
       key="Alderaan"
     >
@@ -206,7 +206,6 @@ exports[`Planets Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      favClickHandler={[Function]}
       data={
         Object {
           "climate": "temperate, tropical",
@@ -216,6 +215,7 @@ exports[`Planets Exist and matches snapshot 1`] = `
           "terrain": "jungle, rainforests",
         }
       }
+      favClickHandler={[Function]}
       highlighted="highlighted"
       key="Yavin IV"
     >
@@ -255,7 +255,6 @@ exports[`Planets Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      favClickHandler={[Function]}
       data={
         Object {
           "climate": "frozen",
@@ -265,6 +264,7 @@ exports[`Planets Exist and matches snapshot 1`] = `
           "terrain": "tundra, ice caves, mountain ranges",
         }
       }
+      favClickHandler={[Function]}
       highlighted="highlighted"
       key="Hoth"
     >
@@ -304,7 +304,6 @@ exports[`Planets Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      favClickHandler={[Function]}
       data={
         Object {
           "climate": "murky",
@@ -314,6 +313,7 @@ exports[`Planets Exist and matches snapshot 1`] = `
           "terrain": "swamp, jungles",
         }
       }
+      favClickHandler={[Function]}
       highlighted="highlighted"
       key="Dagobah"
     >
@@ -353,7 +353,6 @@ exports[`Planets Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      favClickHandler={[Function]}
       data={
         Object {
           "climate": "temperate",
@@ -363,6 +362,7 @@ exports[`Planets Exist and matches snapshot 1`] = `
           "terrain": "gas giant",
         }
       }
+      favClickHandler={[Function]}
       highlighted="highlighted"
       key="Bespin"
     >
@@ -402,7 +402,6 @@ exports[`Planets Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      favClickHandler={[Function]}
       data={
         Object {
           "climate": "temperate",
@@ -412,6 +411,7 @@ exports[`Planets Exist and matches snapshot 1`] = `
           "terrain": "forests, mountains, lakes",
         }
       }
+      favClickHandler={[Function]}
       highlighted="highlighted"
       key="Endor"
     >
@@ -451,7 +451,6 @@ exports[`Planets Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      favClickHandler={[Function]}
       data={
         Object {
           "climate": "temperate",
@@ -461,6 +460,7 @@ exports[`Planets Exist and matches snapshot 1`] = `
           "terrain": "grassy hills, swamps, forests, mountains",
         }
       }
+      favClickHandler={[Function]}
       highlighted="highlighted"
       key="Naboo"
     >
@@ -500,7 +500,6 @@ exports[`Planets Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      favClickHandler={[Function]}
       data={
         Object {
           "climate": "temperate",
@@ -510,6 +509,7 @@ exports[`Planets Exist and matches snapshot 1`] = `
           "terrain": "cityscape, mountains",
         }
       }
+      favClickHandler={[Function]}
       highlighted="highlighted"
       key="Coruscant"
     >
@@ -549,7 +549,6 @@ exports[`Planets Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      favClickHandler={[Function]}
       data={
         Object {
           "climate": "temperate",
@@ -559,6 +558,7 @@ exports[`Planets Exist and matches snapshot 1`] = `
           "terrain": "ocean",
         }
       }
+      favClickHandler={[Function]}
       highlighted="highlighted"
       key="Kamino"
     >
@@ -598,7 +598,6 @@ exports[`Planets Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      favClickHandler={[Function]}
       data={
         Object {
           "climate": "temperate, arid",
@@ -608,6 +607,7 @@ exports[`Planets Exist and matches snapshot 1`] = `
           "terrain": "rock, desert, mountain, barren",
         }
       }
+      favClickHandler={[Function]}
       highlighted="highlighted"
       key="Geonosis"
     >
