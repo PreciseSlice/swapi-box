@@ -16,7 +16,9 @@ class App extends Component {
       peopleData: [],
       planetData: [],
       vehicleData: [],
-      favorites: []
+      favorites: [],
+      navVisable: true,
+      mobile: false
     };
   }
 
@@ -28,7 +30,7 @@ class App extends Component {
 
   setVehicles = vehicleData => this.setState({ vehicleData });
 
-  clickHandler = cardProps => {
+  favClickHandler = cardProps => {
     const { favorites } = this.state;
     let newFavorites;
 
@@ -40,23 +42,67 @@ class App extends Component {
     this.setState({ favorites: newFavorites });
   };
 
+  navClickHandler = () => {
+    const { navVisable } = this.state;
+    this.setState({ navVisable: !navVisable });
+  };
+
+  navArrow = () => {
+    const { navVisable } = this.state;
+    const arrow = navVisable ? '▼' : '◀'
+    
+    return arrow
+  }
+
+  updateResponsive() {
+    if (window.innerWidth < 940) {
+      this.setState({ mobile: true });
+      this.setState({ navVisable: false });
+    } else {
+      this.setState({ mobile: false });
+      this.setState({ navVisable: true });
+    }
+  }
+
+  componentDidMount() {
+    this.updateResponsive();
+    window.addEventListener("resize", () => this.updateResponsive());
+  }
+  
   render() {
+
     const {
       favorites,
       filmData,
       peopleData,
       planetData,
-      vehicleData
+      navVisable,
+      vehicleData,
+      mobile
     } = this.state;
 
-    const { clickHandler, setFilms, setPeople, setPlanets, setVehicles } = this;
+    const {
+      favClickHandler,
+      setFilms,
+      setPeople,
+      setPlanets,
+      setVehicles,
+      navClickHandler,
+      navArrow
+    } = this;
 
     return (
       <div className="app">
         <div className="header">
           <h1>swapi-box</h1>
         </div>
-        <Nav favCount={favorites.length} />
+        <Nav
+          favCount={favorites.length}
+          navVisable={navVisable}
+          navClickHandler={navClickHandler}
+          navArrow={navArrow}
+          mobile={mobile}
+        />
         <div className="main">
           <Switch>
             <Route
@@ -71,7 +117,7 @@ class App extends Component {
                 <People
                   setPeople={setPeople}
                   peopleData={peopleData}
-                  clickHandler={clickHandler}
+                  favClickHandler={favClickHandler}
                   favorites={favorites}
                 />
               )}
@@ -83,7 +129,7 @@ class App extends Component {
                 <Planets
                   setPlanets={setPlanets}
                   planetData={planetData}
-                  clickHandler={clickHandler}
+                  favClickHandler={favClickHandler}
                   favorites={favorites}
                 />
               )}
@@ -95,7 +141,7 @@ class App extends Component {
                 <Vehicles
                   setVehicles={setVehicles}
                   vehicleData={vehicleData}
-                  clickHandler={clickHandler}
+                  favClickHandler={favClickHandler}
                   favorites={favorites}
                 />
               )}
@@ -104,7 +150,10 @@ class App extends Component {
             <Route
               path="/favorites"
               render={() => (
-                <Favorites favorites={favorites} clickHandler={clickHandler} />
+                <Favorites
+                  favorites={favorites}
+                  favClickHandler={favClickHandler}
+                />
               )}
             />
           </Switch>
