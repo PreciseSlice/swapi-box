@@ -52,11 +52,11 @@ describe('App', () => {
 
     expect(wrapper.state().favorites).toEqual([]);
 
-    wrapper.instance().clickHandler(cardProp);
+    wrapper.instance().favClickHandler(cardProp);
 
     expect(wrapper.state().favorites).toEqual([cardProp]);
 
-    wrapper.instance().clickHandler(cardProp);
+    wrapper.instance().favClickHandler(cardProp);
 
     expect(wrapper.state().favorites).toEqual([]);
   });

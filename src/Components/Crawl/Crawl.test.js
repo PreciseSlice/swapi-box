@@ -35,7 +35,7 @@ describe('Crawl', () => {
       <Crawl
         setFilms={mockFunction}
         filmData={{}}
-        clickHandler={secondMockFunction}
+        favClickHandler={secondMockFunction}
         favorites={{}}
       />
     );

@@ -14,7 +14,7 @@ class People extends Component {
   }
 
   render() {
-    const { peopleData, clickHandler, favorites } = this.props;
+    const { peopleData, favClickHandler, favorites } = this.props;
 
     const renderCards = peopleData.map(person => {
       const highlighted = favorites.includes(person) ? 'highlighted' : '';
@@ -22,7 +22,7 @@ class People extends Component {
         <Card
           data={person}
           key={person.name}
-          clickHandler={clickHandler}
+          favClickHandler={favClickHandler}
           highlighted={highlighted}
         />
       );
@@ -37,7 +37,7 @@ class People extends Component {
 }
 
 People.propTypes = {
-  clickHandler: PropTypes.func.isRequired,
+  favClickHandler: PropTypes.func.isRequired,
 
   favorites: PropTypes.array.isRequired,
 

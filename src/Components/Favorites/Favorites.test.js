@@ -30,7 +30,7 @@ describe('Favorites', () => {
             species: ['droid']
           }
         ]}
-        clickHandler={jest.fn()}
+        favClickHandler={jest.fn()}
       />
     );
   });

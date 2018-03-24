@@ -2,7 +2,7 @@
 
 exports[`People Exist and matches snapshot 1`] = `
 <People
-  clickHandler={[Function]}
+  favClickHandler={[Function]}
   favorites={
     Array [
       Object {
@@ -41,7 +41,7 @@ exports[`People Exist and matches snapshot 1`] = `
     className="peopleContainer"
   >
     <Card
-      clickHandler={[Function]}
+      favClickHandler={[Function]}
       data={
         Object {
           "homeworld": "planet",
@@ -84,7 +84,7 @@ exports[`People Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      clickHandler={[Function]}
+      favClickHandler={[Function]}
       data={
         Object {
           "homeworld": "planet",
