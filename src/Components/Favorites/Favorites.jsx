@@ -3,9 +3,9 @@ import './Favorites.css';
 import Card from '../Card/Card.jsx';
 import PropTypes from 'prop-types';
 
-const Favorites = ({ favorites, clickHandler }) => {
+const Favorites = ({ favorites, favClickHandler }) => {
   const renderCards = favorites.map(favorite => (
-    <Card data={favorite} key={favorite.name} clickHandler={clickHandler} />
+    <Card data={favorite} key={favorite.name} favClickHandler={favClickHandler} />
   ));
 
   if (favorites.length > 0) {
@@ -21,7 +21,7 @@ const Favorites = ({ favorites, clickHandler }) => {
 
 Favorites.propTypes = {
   favorites: PropTypes.array.isRequired,
-  clickHandler: PropTypes.func.isRequired
+  favClickHandler: PropTypes.func.isRequired
 };
 
 export default Favorites;

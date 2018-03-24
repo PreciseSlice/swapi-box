@@ -17,7 +17,7 @@ describe('Vehicles', () => {
       <Vehicles
         setVehicles={mockFunction}
         vehicleData={cleanVehicles}
-        clickHandler={secondMockFunction}
+        favClickHandler={secondMockFunction}
         favorites={cleanVehicles}
       />
     );
@@ -33,7 +33,7 @@ describe('Vehicles', () => {
       <Vehicles
         setVehicles={mockFunction}
         vehicleData={[]}
-        clickHandler={secondMockFunction}
+        favClickHandler={secondMockFunction}
         favorites={cleanVehicles}
       />
     );

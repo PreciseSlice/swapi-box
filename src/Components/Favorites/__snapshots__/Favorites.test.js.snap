@@ -2,7 +2,7 @@
 
 exports[`Favorites Favorites Exist and matches snapshot 1`] = `
 <Favorites
-  clickHandler={[Function]}
+  favClickHandler={[Function]}
   favorites={
     Array [
       Object {
@@ -34,7 +34,7 @@ exports[`Favorites Favorites Exist and matches snapshot 1`] = `
     className="favoriteContainer"
   >
     <Card
-      clickHandler={[Function]}
+      favClickHandler={[Function]}
       data={
         Object {
           "climate": "temperate",
@@ -76,7 +76,7 @@ exports[`Favorites Favorites Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      clickHandler={[Function]}
+      favClickHandler={[Function]}
       data={
         Object {
           "homeworld": "planet",
@@ -120,7 +120,7 @@ exports[`Favorites Favorites Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      clickHandler={[Function]}
+      favClickHandler={[Function]}
       data={
         Object {
           "homeworld": "planet",

@@ -2,7 +2,7 @@
 
 exports[`Vehicles Exist and matches snapshot 1`] = `
 <Vehicles
-  clickHandler={[Function]}
+  favClickHandler={[Function]}
   favorites={
     Array [
       Object {
@@ -137,7 +137,7 @@ exports[`Vehicles Exist and matches snapshot 1`] = `
     className="vehicle-container"
   >
     <Card
-      clickHandler={[Function]}
+      favClickHandler={[Function]}
       data={
         Object {
           "model": "Digger Crawler",
@@ -180,7 +180,7 @@ exports[`Vehicles Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      clickHandler={[Function]}
+      favClickHandler={[Function]}
       data={
         Object {
           "model": "T-16 skyhopper",
@@ -223,7 +223,7 @@ exports[`Vehicles Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      clickHandler={[Function]}
+      favClickHandler={[Function]}
       data={
         Object {
           "model": "X-34 landspeeder",
@@ -266,7 +266,7 @@ exports[`Vehicles Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      clickHandler={[Function]}
+      favClickHandler={[Function]}
       data={
         Object {
           "model": "Twin Ion Engine/Ln Starfighter",
@@ -309,7 +309,7 @@ exports[`Vehicles Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      clickHandler={[Function]}
+      favClickHandler={[Function]}
       data={
         Object {
           "model": "t-47 airspeeder",
@@ -352,7 +352,7 @@ exports[`Vehicles Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      clickHandler={[Function]}
+      favClickHandler={[Function]}
       data={
         Object {
           "model": "TIE/sa bomber",
@@ -395,7 +395,7 @@ exports[`Vehicles Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      clickHandler={[Function]}
+      favClickHandler={[Function]}
       data={
         Object {
           "model": "All Terrain Armored Transport",
@@ -438,7 +438,7 @@ exports[`Vehicles Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      clickHandler={[Function]}
+      favClickHandler={[Function]}
       data={
         Object {
           "model": "All Terrain Scout Transport",
@@ -481,7 +481,7 @@ exports[`Vehicles Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      clickHandler={[Function]}
+      favClickHandler={[Function]}
       data={
         Object {
           "model": "Storm IV Twin-Pod",
@@ -524,7 +524,7 @@ exports[`Vehicles Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      clickHandler={[Function]}
+      favClickHandler={[Function]}
       data={
         Object {
           "model": "Modified Luxury Sail Barge",

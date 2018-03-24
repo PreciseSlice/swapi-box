@@ -17,7 +17,7 @@ describe('People', () => {
       <People
         setPeople={mockFunction}
         peopleData={peopleData}
-        clickHandler={secondMockFunction}
+        favClickHandler={secondMockFunction}
         favorites={peopleData}
       />
     );
@@ -33,7 +33,7 @@ describe('People', () => {
       <People
         setPeople={mockFunction}
         peopleData={[]}
-        clickHandler={secondMockFunction}
+        favClickHandler={secondMockFunction}
         favorites={peopleData}
       />
     );

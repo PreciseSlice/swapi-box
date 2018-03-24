@@ -17,7 +17,7 @@ describe('Planets', () => {
       <Planets
         setPlanets={mockFunction}
         planetData={cleanPlanets}
-        clickHandler={secondMockFunction}
+        favClickHandler={secondMockFunction}
         favorites={cleanPlanets}
       />
     );
@@ -33,7 +33,7 @@ describe('Planets', () => {
       <Planets
         setPlanets={mockFunction}
         planetData={[]}
-        clickHandler={secondMockFunction}
+        favClickHandler={secondMockFunction}
         favorites={cleanPlanets}
       />
     );

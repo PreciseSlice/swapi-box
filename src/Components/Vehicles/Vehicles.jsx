@@ -14,7 +14,7 @@ class Vehicles extends Component {
   }
 
   render() {
-    const { vehicleData, clickHandler, favorites } = this.props;
+    const { vehicleData, favClickHandler, favorites } = this.props;
 
     const renderCards = vehicleData.map(vehicle => {
       const highlighted = favorites.includes(vehicle) ? 'highlighted' : '';
@@ -22,7 +22,7 @@ class Vehicles extends Component {
         <Card
           data={vehicle}
           key={vehicle.name}
-          clickHandler={clickHandler}
+          favClickHandler={favClickHandler}
           highlighted={highlighted}
         />
       );
@@ -37,7 +37,7 @@ class Vehicles extends Component {
 }
 
 Vehicles.propTypes = {
-  clickHandler: PropTypes.func.isRequired,
+  favClickHandler: PropTypes.func.isRequired,
 
   favorites: PropTypes.array.isRequired,
 

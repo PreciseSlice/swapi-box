@@ -14,7 +14,7 @@ class Planets extends Component {
   }
 
   render() {
-    const { planetData, clickHandler, favorites } = this.props;
+    const { planetData, favClickHandler, favorites } = this.props;
 
     const renderCards = planetData.map(planet => {
       const highlighted = favorites.includes(planet) ? 'highlighted' : '';
@@ -22,7 +22,7 @@ class Planets extends Component {
         <Card
           data={planet}
           key={planet.name}
-          clickHandler={clickHandler}
+          favClickHandler={favClickHandler}
           highlighted={highlighted}
         />
       );
@@ -37,7 +37,7 @@ class Planets extends Component {
 }
 
 Planets.propTypes = {
-  clickHandler: PropTypes.func.isRequired,
+  favClickHandler: PropTypes.func.isRequired,
 
   favorites: PropTypes.array.isRequired,
 

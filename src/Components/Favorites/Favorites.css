@@ -8,10 +8,11 @@
   justify-content: space-evenly; }
 
 .noFavorites {
-  display: flex;
   align-items: center;
+  display: flex;
+  height: 100%;
   justify-content: center;
-  height: 100%; }
+  text-align: center; }
   .noFavorites h1 {
     color: #feda4a;
     font-size: 60px; }

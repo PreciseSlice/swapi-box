@@ -2,7 +2,7 @@
 
 exports[`Planets Exist and matches snapshot 1`] = `
 <Planets
-  clickHandler={[Function]}
+  favClickHandler={[Function]}
   favorites={
     Array [
       Object {
@@ -157,7 +157,7 @@ exports[`Planets Exist and matches snapshot 1`] = `
     className="planet-container"
   >
     <Card
-      clickHandler={[Function]}
+      favClickHandler={[Function]}
       data={
         Object {
           "climate": "temperate",
@@ -206,7 +206,7 @@ exports[`Planets Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      clickHandler={[Function]}
+      favClickHandler={[Function]}
       data={
         Object {
           "climate": "temperate, tropical",
@@ -255,7 +255,7 @@ exports[`Planets Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      clickHandler={[Function]}
+      favClickHandler={[Function]}
       data={
         Object {
           "climate": "frozen",
@@ -304,7 +304,7 @@ exports[`Planets Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      clickHandler={[Function]}
+      favClickHandler={[Function]}
       data={
         Object {
           "climate": "murky",
@@ -353,7 +353,7 @@ exports[`Planets Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      clickHandler={[Function]}
+      favClickHandler={[Function]}
       data={
         Object {
           "climate": "temperate",
@@ -402,7 +402,7 @@ exports[`Planets Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      clickHandler={[Function]}
+      favClickHandler={[Function]}
       data={
         Object {
           "climate": "temperate",
@@ -451,7 +451,7 @@ exports[`Planets Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      clickHandler={[Function]}
+      favClickHandler={[Function]}
       data={
         Object {
           "climate": "temperate",
@@ -500,7 +500,7 @@ exports[`Planets Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      clickHandler={[Function]}
+      favClickHandler={[Function]}
       data={
         Object {
           "climate": "temperate",
@@ -549,7 +549,7 @@ exports[`Planets Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      clickHandler={[Function]}
+      favClickHandler={[Function]}
       data={
         Object {
           "climate": "temperate",
@@ -598,7 +598,7 @@ exports[`Planets Exist and matches snapshot 1`] = `
       </div>
     </Card>
     <Card
-      clickHandler={[Function]}
+      favClickHandler={[Function]}
       data={
         Object {
           "climate": "temperate, arid",
