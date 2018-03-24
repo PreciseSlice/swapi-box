@@ -33,7 +33,11 @@ const Nav = ({ favCount, navVisable, navClickHandler, navArrow, mobile }) => {
 };
 
 Nav.propTypes = {
-  favCount: PropTypes.number.isRequired
+  favCount: PropTypes.number.isRequired,
+  navVisable: PropTypes.bool.isRequired,
+  navClickHandler: PropTypes.func.isRequired,
+  navArrow: PropTypes.func.isRequired,
+  mobile: PropTypes.bool.isRequired
 };
 
 export default Nav;
