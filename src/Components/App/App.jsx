@@ -43,8 +43,11 @@ class App extends Component {
   };
 
   navClickHandler = () => {
-    const { navVisable } = this.state;
-    this.setState({ navVisable: !navVisable });
+    const { mobile } = this.state;
+    if (mobile === true) {
+      const { navVisable } = this.state;
+      this.setState({ navVisable: !navVisable });
+    }
   };
 
   navArrow = () => {
@@ -55,12 +58,10 @@ class App extends Component {
   };
 
   updateResponsive() {
-    if (window.innerWidth < 940) {
+    const { mobile } = this.state;
+    if (window.innerWidth < 940 && mobile === false) {
       this.setState({ mobile: true });
       this.setState({ navVisable: false });
-    } else {
-      this.setState({ mobile: false });
-      this.setState({ navVisable: true });
     }
   }
 
