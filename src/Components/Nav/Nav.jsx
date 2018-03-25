@@ -11,19 +11,19 @@ const Nav = ({ favCount, navVisable, navClickHandler, navArrow, mobile }) => {
       )}
       {navVisable && (
         <div className="nav-btns">
-          <button>
+          <button onClick={() => navClickHandler()}>
             <NavLink to="/">crawl</NavLink>
           </button>
-          <button>
+          <button onClick={() => navClickHandler()}>
             <NavLink to="/people">people</NavLink>
           </button>
-          <button>
+          <button onClick={() => navClickHandler()}>
             <NavLink to="/planets">planets</NavLink>
           </button>
-          <button>
+          <button onClick={() => navClickHandler()}>
             <NavLink to="/vehicles">vehicles</NavLink>
           </button>
-          <button>
+          <button onClick={() => navClickHandler()}>
             <NavLink to="/favorites">favorites {favCount}</NavLink>
           </button>
         </div>
