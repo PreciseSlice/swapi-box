@@ -48,8 +48,9 @@
     top: -6000px;
     transform: rotateX(25deg) translateZ(-2500px); } }
 
-@media (max-width: 1100px) {
-  .crawl {
-    animation: crawl 60s linear; }
-  p {
-    font-size: .75em; } }
+@media (max-width: 1250px) {
+  .crawl p {
+    font-size: .50em; }
+  .star-wars p {
+    letter-spacing: 1px;
+    line-height: 100%; } }
