@@ -2,7 +2,7 @@
 
 ![app](https://media.giphy.com/media/1gWiNkv1NQLPr9wuh7/giphy.gif)
 
-Swapi box taps in the Star Wars API and renders data using React. This program features information regarding the people, planets and vehicles of the star wars universe. Also featured are the films opening crawls.
+Swapi box taps into the Star Wars API and renders data using React. This program features information regarding the people, planets and vehicles of the Star Wars universe. Also featured are the films opening crawls.
 
 The project exhibits React, asynchronous javascript, nested fetch calls, type checking, SASS and extensive testing.      
 
