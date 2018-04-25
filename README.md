@@ -21,6 +21,20 @@ The project exhibits React, asynchronous javascript, nested fetch calls, type ch
 * Jest
 * Enzyme
 
+## Using the app
+
+### Select the category of information.
+
+![select](https://media.giphy.com/media/xloI6GR82AF1V0Idjc/giphy.gif)
+
+<br/>
+
+### Favorites may be saved and viewed on the favorites page.
+
+![favorites](https://media.giphy.com/media/5zbMaA4qK46YsQI0Hp/giphy.gif)
+
+<br/>
+
 ## Getting Started 
 
 #### Clone down this repository. 
@@ -40,15 +54,3 @@ The project exhibits React, asynchronous javascript, nested fetch calls, type ch
 #### To run the test suite
 
 `npm test`
-
-## Using the app
-
-### Select the category of information.
-
-![select](https://media.giphy.com/media/xloI6GR82AF1V0Idjc/giphy.gif)
-
-<br/>
-
-### Favorites may be saved and viewed on the favorites page.
-
-![favorites](https://media.giphy.com/media/5zbMaA4qK46YsQI0Hp/giphy.gif)
